@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>resource/image/mountain_1.bmp</file>
+        <file>resource/image/mountain_2.bmp</file>
+        <file>resource/image/mountain_3.bmp</file>
+        <file>resource/image/mountain_4.bmp</file>
+    </qresource>
+    <qresource prefix="/icon">
+        <file>resource/image/simple.ico</file>
+        <file>resource/image/mounBT_1.ico</file>
+        <file>resource/image/mounBT_2.ico</file>
+        <file>resource/image/mounBT_3.ico</file>
+        <file>resource/image/mounBT_4.ico</file>
+        <file>resource/image/double.ico</file>
+        <file>resource/image/earth.ico</file>
+    </qresource>
+</RCC>
