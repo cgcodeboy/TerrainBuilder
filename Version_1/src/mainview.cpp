@@ -1,4 +1,4 @@
-#include "mainview.h"
+#include "header/mainview.h"
 
 MainView::MainView(QWidget *parent):QGraphicsView(parent)
 {

@@ -1,0 +1,16 @@
+## `TerrainBuilder`
+> This small software is used to produce terrain file.
+
+### It will include follow parts:
+1. Generator
+> The generator is used to generator the origin terrain data, maybe I will use perlin、vonoroi and other easy algorithms like constant、gradient、radial grad. The user can also draw the origin terrain data in a blank file.
+2. Conbiner
+> The conbiner is used to conbine several items which have the same output format, and then it will use the inner algorithm to produce a new output which has the same format as the input. Now I decide to design two kind of conbiner, including easy conbiner and constraint conbiner. The former just conbine two input together, but the latter will have a constraint parameter.
+3. Filter
+> The filter is used to make some change to the input data. For example, terrace、clamp、add noise、clur and etc.
+4. Math
+> It maybe a kind of filter, but I want this kind of item to be independent from the filter items. In this kind of item, the input data can add、subtract、multiply、divide and invert.
+5. Nature
+> It maybe also a kind of filter like Math, but the inner algorithm may be more complex than the normal filters. This kind of item will include water、 thermal erosion and etc.
+6. Output
+> The output is used to produce the latest terrain file, including texture file and height file. Maybe I will use other storage format to store the terrain.

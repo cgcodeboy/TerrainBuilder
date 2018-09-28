@@ -1,18 +1,18 @@
-#include "perlingenerator.h"
+#include "header/gradientgenerator.h"
 
-PerlinGenerator::PerlinGenerator()
+GradientGenerator::GradientGenerator()
 {
     focused = false;
     setFlag(ItemIsSelectable,true);
     setFlag(ItemIsFocusable,true);
 }
 
-QRectF PerlinGenerator::boundingRect() const
+QRectF GradientGenerator::boundingRect() const
 {
     return QRectF(0,0,60,40);
 }
 
-void PerlinGenerator::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+void GradientGenerator::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     QRectF rect = boundingRect();
 
@@ -24,26 +24,26 @@ void PerlinGenerator::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
     }
     else
     {
-        QImage image(":/image/resource/image/mountain_3.bmp");
+        QImage image(":/image/resource/image/mountain_4.bmp");
         painter->drawImage(rect,image);
     }
 
     painter->drawRect(rect);
 }
 
-void PerlinGenerator::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
+void GradientGenerator::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsItem::mouseDoubleClickEvent(event);
 }
 
-void PerlinGenerator::focusInEvent(QFocusEvent *event)
+void GradientGenerator::focusInEvent(QFocusEvent *event)
 {
     focused = true;
     update();
     QGraphicsItem::focusInEvent(event);
 }
 
-void PerlinGenerator::focusOutEvent(QFocusEvent *event)
+void GradientGenerator::focusOutEvent(QFocusEvent *event)
 {
     focused = false;
     update();

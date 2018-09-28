@@ -1,3 +1,7 @@
+/*----------------------------------------------------------------------
+Copyright [09.28.2018] by [cgcodeboy]
+Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
+-----------------------------------------------------------------------*/
 #ifndef MAINVIEW_H
 #define MAINVIEW_H
 
@@ -6,7 +10,7 @@
 #include <QGraphicsScene>
 #include <QMouseEvent>
 #include <QDebug>
-#include <itemfactory.h>
+#include <header/itemfactory.h>
 
 using namespace std;
 

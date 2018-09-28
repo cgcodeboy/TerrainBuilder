@@ -1,7 +1,11 @@
+/*----------------------------------------------------------------------
+Copyright [09.28.2018] by [cgcodeboy]
+Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
+-----------------------------------------------------------------------*/
 #ifndef GRADIENT_GRNERATOR_H
 #define GRADIENT_GRNERATOR_H
 
-#include <generator.h>
+#include <header/generator.h>
 
 class GradientGenerator : public Generator
 {

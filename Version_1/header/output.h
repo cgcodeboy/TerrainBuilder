@@ -1,21 +1,20 @@
-#ifndef GENERATOR_H
-#define GENERATOR_H
+#ifndef OUTPUT_H
+#define OUTPUT_H
 
-#include <item.h>
+#include <header/item.h>
 
-class Generator : public Item
+class Output : public Item
 {
 public:
-    Generator();
+    Output();
 
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
     virtual void setName(QString name);
-
 protected:
     virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event);
     virtual void focusInEvent(QFocusEvent *event);
     virtual void focusOutEvent(QFocusEvent *event);
 };
 
-#endif // GENERATOR_H
+#endif // OUTPUT_H

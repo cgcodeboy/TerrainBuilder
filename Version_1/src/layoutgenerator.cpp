@@ -1,4 +1,4 @@
-#include "layoutgenerator.h"
+#include "header/layoutgenerator.h"
 
 LayoutGenerator::LayoutGenerator()
 {

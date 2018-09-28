@@ -1,18 +1,18 @@
-#include "gradientgenerator.h"
+#include "header/constantgenerator.h"
 
-GradientGenerator::GradientGenerator()
+ConstantGenerator::ConstantGenerator()
 {
     focused = false;
     setFlag(ItemIsSelectable,true);
     setFlag(ItemIsFocusable,true);
 }
 
-QRectF GradientGenerator::boundingRect() const
+QRectF ConstantGenerator::boundingRect() const
 {
     return QRectF(0,0,60,40);
 }
 
-void GradientGenerator::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+void ConstantGenerator::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     QRectF rect = boundingRect();
 
@@ -24,26 +24,26 @@ void GradientGenerator::paint(QPainter *painter, const QStyleOptionGraphicsItem 
     }
     else
     {
-        QImage image(":/image/resource/image/mountain_4.bmp");
+        QImage image(":/image/resource/image/mountain_1.bmp");
         painter->drawImage(rect,image);
     }
 
     painter->drawRect(rect);
 }
 
-void GradientGenerator::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
+void ConstantGenerator::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsItem::mouseDoubleClickEvent(event);
 }
 
-void GradientGenerator::focusInEvent(QFocusEvent *event)
+void ConstantGenerator::focusInEvent(QFocusEvent *event)
 {
     focused = true;
     update();
     QGraphicsItem::focusInEvent(event);
 }
 
-void GradientGenerator::focusOutEvent(QFocusEvent *event)
+void ConstantGenerator::focusOutEvent(QFocusEvent *event)
 {
     focused = false;
     update();
