@@ -1,4 +1,4 @@
-#include "header/item.h"
+#include "include/item.h"
 
 Item::Item(QGraphicsItem *parent):QGraphicsItem(parent)
 {

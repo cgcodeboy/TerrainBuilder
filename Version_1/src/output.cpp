@@ -1,4 +1,4 @@
-#include "header/output.h"
+#include "include/output.h"
 
 Output::Output()
 {

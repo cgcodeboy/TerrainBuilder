@@ -1,4 +1,4 @@
-#include "header/constantgenerator.h"
+#include "include/constantgenerator.h"
 
 ConstantGenerator::ConstantGenerator()
 {

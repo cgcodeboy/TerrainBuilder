@@ -1,4 +1,4 @@
-#include "header/perlingenerator.h"
+#include "include/perlingenerator.h"
 
 PerlinGenerator::PerlinGenerator()
 {
@@ -34,6 +34,8 @@ void PerlinGenerator::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
 void PerlinGenerator::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsItem::mouseDoubleClickEvent(event);
+    PerlinWidget *perlin = new PerlinWidget;
+    perlin->show();
 }
 
 void PerlinGenerator::focusInEvent(QFocusEvent *event)
