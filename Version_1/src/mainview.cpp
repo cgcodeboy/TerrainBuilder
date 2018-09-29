@@ -117,22 +117,22 @@ void MainView::mousePressEvent(QMouseEvent *event)
 
 void MainView::initBluePrint()
 {
-    for(int j = 0;j<4;j++)
-    {
-        addItem(ITEM_TYPE::Constant_Generator,0,j*60);
-    }
-    for(int j = 0;j<4;j++)
-    {
-        addItem(ITEM_TYPE::Perlin_Generator,80,j*60);
-    }
-    for(int j = 0;j<4;j++)
-    {
-        addItem(ITEM_TYPE::Layout_Generator,160,j*60);
-    }
-    for(int j = 0;j<4;j++)
-    {
-        addItem(ITEM_TYPE::Gradient_Generator,240,j*60);
-    }
+//    for(int j = 0;j<4;j++)
+//    {
+//        addItem(ITEM_TYPE::Constant_Generator,0,j*60);
+//    }
+//    for(int j = 0;j<4;j++)
+//    {
+//        addItem(ITEM_TYPE::Perlin_Generator,80,j*60);
+//    }
+//    for(int j = 0;j<4;j++)
+//    {
+//        addItem(ITEM_TYPE::Layout_Generator,160,j*60);
+//    }
+//    for(int j = 0;j<4;j++)
+//    {
+//        addItem(ITEM_TYPE::Gradient_Generator,240,j*60);
+//    }
 }
 
 void MainView::addItem(ITEM_TYPE type,int x,int y)

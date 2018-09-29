@@ -11,6 +11,15 @@ class SimpleCombiner : public Conbiner
 {
 public:
     SimpleCombiner();
+
+    QRectF boundingRect() const;
+
+    virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+
+protected:
+    virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event);
+    virtual void focusInEvent(QFocusEvent *event);
+    virtual void focusOutEvent(QFocusEvent *event);
 };
 
 #endif // SIMPLECOMBINER_H

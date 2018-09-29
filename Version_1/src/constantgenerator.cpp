@@ -9,26 +9,32 @@ ConstantGenerator::ConstantGenerator()
 
 QRectF ConstantGenerator::boundingRect() const
 {
-    return QRectF(0,0,60,40);
+    return QRectF(0,0,100,200);
 }
 
 void ConstantGenerator::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    QRectF rect = boundingRect();
-
     if(focused){
         painter->setPen(Qt::green);
-        painter->drawRect(0,0,60,40);
+        painter->drawRect(0,0,100,200);
         QBrush brush(QColor(255,0,0,100));
-        painter->fillRect(QRect(0,0,60,40),brush);
+        painter->fillRect(QRect(0,0,100,200),brush);
     }
     else
     {
-        QImage image(":/image/resource/image/mountain_1.bmp");
-        painter->drawImage(rect,image);
-    }
+        QRectF rec1(0,0,100,50);
+        QImage image(":/image/resource/image/item/constant.jpg");
+        painter->drawImage(rec1,image);
 
-    painter->drawRect(rect);
+        QRectF rec2(0,50,100,150);
+        QBrush brush(QColor(30,40,50,50));
+        painter->fillRect(rec2,brush);
+
+        painter->setPen(Qt::green);
+        painter->drawEllipse(2,68,5,5);
+
+        painter->drawText(10,70,"hello");
+    }
 }
 
 void ConstantGenerator::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)

@@ -10,7 +10,7 @@ void Generator::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 
 }
 
-void Generator::setName(QString name)
+void Generator::generate()
 {
 
 }

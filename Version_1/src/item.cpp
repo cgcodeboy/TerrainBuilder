@@ -12,7 +12,7 @@ void Item::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWid
 
 void Item::setName(QString name)
 {
-
+    m_name = name;
 }
 
 void Item::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)

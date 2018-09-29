@@ -28,12 +28,17 @@ public:
 
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
-    virtual void setName(QString name);
+    void setName(QString name);
+private:
+    QString m_name;
+
 
 protected:
     virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event);
     virtual void focusInEvent(QFocusEvent *event);
     virtual void focusOutEvent(QFocusEvent *event);
+
+    bool focused;
 };
 
 #endif // ITEM_H

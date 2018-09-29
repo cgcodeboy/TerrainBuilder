@@ -10,11 +10,6 @@ void Output::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
 
 }
 
-void Output::setName(QString name)
-{
-
-}
-
 void Output::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsItem::mouseDoubleClickEvent(event);

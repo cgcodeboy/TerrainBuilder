@@ -14,7 +14,6 @@ public:
 
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
-    virtual void setName(QString name);
 protected:
     virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event);
     virtual void focusInEvent(QFocusEvent *event);

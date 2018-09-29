@@ -4,6 +4,27 @@
         <file>resource/image/mountain_2.bmp</file>
         <file>resource/image/mountain_3.bmp</file>
         <file>resource/image/mountain_4.bmp</file>
+        <file>resource/image/item/gradient.jpg</file>
+        <file>resource/image/item/layout.jpg</file>
+        <file>resource/image/item/add.jpg</file>
+        <file>resource/image/item/blur.jpg</file>
+        <file>resource/image/item/clamp.jpg</file>
+        <file>resource/image/item/complex.jpg</file>
+        <file>resource/image/item/constant.jpg</file>
+        <file>resource/image/item/divide.jpg</file>
+        <file>resource/image/item/height.jpg</file>
+        <file>resource/image/item/invert.jpg</file>
+        <file>resource/image/item/multiply.jpg</file>
+        <file>resource/image/item/noise.jpg</file>
+        <file>resource/image/item/perlin.jpg</file>
+        <file>resource/image/item/radial.jpg</file>
+        <file>resource/image/item/simle.jpg</file>
+        <file>resource/image/item/subtract.jpg</file>
+        <file>resource/image/item/terrace.jpg</file>
+        <file>resource/image/item/texture.jpg</file>
+        <file>resource/image/item/thermal.jpg</file>
+        <file>resource/image/item/voronoi.jpg</file>
+        <file>resource/image/item/water.jpg</file>
     </qresource>
     <qresource prefix="/icon">
         <file>resource/image/simple.ico</file>
@@ -13,5 +34,8 @@
         <file>resource/image/mounBT_4.ico</file>
         <file>resource/image/double.ico</file>
         <file>resource/image/earth.ico</file>
+    </qresource>
+    <qresource prefix="/xml">
+        <file>resource/xml/item.xml</file>
     </qresource>
 </RCC>
