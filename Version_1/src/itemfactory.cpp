@@ -25,6 +25,14 @@ Item *ItemFactory::buildItem(ITEM_TYPE type)
         item = new GradientGenerator();
         break;
     }
+    case ITEM_TYPE::Radial_Generator:{
+        item = new RadialGenerator();
+        break;
+    }
+    case ITEM_TYPE::Voronoi_Generator:{
+        item = new VoronoiGenerator();
+        break;
+    }
     default:
         break;
     }

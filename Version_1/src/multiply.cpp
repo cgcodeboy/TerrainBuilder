@@ -1,6 +1,6 @@
 #include "include/multiply.h"
 
-Multiply::Multiply()
+Multiply::Multiply():Math(ITEM_TYPE::Multiply_Math)
 {
 
 }

@@ -1,6 +1,6 @@
 #include "include\voronoigenerator.h"
 
-VoronoiGenerator::VoronoiGenerator()
+VoronoiGenerator::VoronoiGenerator():Generator(ITEM_TYPE::Voronoi_Generator)
 {
     focused = false;
     setFlag(ItemIsSelectable,true);

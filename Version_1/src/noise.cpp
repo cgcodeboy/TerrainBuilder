@@ -1,6 +1,6 @@
 #include "include/noise.h"
 
-Noise::Noise()
+Noise::Noise():Filter(ITEM_TYPE::Noise_Filter)
 {
 
 }

@@ -1,6 +1,6 @@
 #include "include/perlingenerator.h"
 
-PerlinGenerator::PerlinGenerator()
+PerlinGenerator::PerlinGenerator():Generator(ITEM_TYPE::Perlin_Generator)
 {
     focused = false;
     setFlag(ItemIsSelectable,true);
@@ -37,10 +37,25 @@ void PerlinGenerator::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
     }
 }
 
+void PerlinGenerator::heightDataProcess()
+{
+
+}
+
+void PerlinGenerator::infoCome(float persistence, int octaves)
+{
+    this->_persistence = persistence;
+    this->_octaves = octaves;
+    qDebug()<<persistence<<octaves;
+    PerlinNoise::setPersistence(persistence);
+    PerlinNoise::setNumOfOctaves(octaves);
+}
+
 void PerlinGenerator::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsItem::mouseDoubleClickEvent(event);
     PerlinWidget *perlin = new PerlinWidget;
+    connect(perlin,SIGNAL(infoConfirm(float,int)),this,SLOT(infoCome(float,int)));
     perlin->show();
 }
 

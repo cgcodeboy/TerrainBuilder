@@ -1,6 +1,6 @@
 #include "include/invert.h"
 
-Invert::Invert()
+Invert::Invert():Math(ITEM_TYPE::Invert_Math)
 {
 
 }

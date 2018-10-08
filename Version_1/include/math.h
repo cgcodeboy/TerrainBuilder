@@ -6,7 +6,7 @@
 class Math : public Item
 {
 public:
-    Math();
+    Math(ITEM_TYPE type);
 
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 

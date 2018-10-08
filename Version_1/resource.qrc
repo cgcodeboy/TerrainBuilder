@@ -28,12 +28,48 @@
     </qresource>
     <qresource prefix="/icon">
         <file>resource/image/simple.ico</file>
-        <file>resource/image/mounBT_1.ico</file>
-        <file>resource/image/mounBT_2.ico</file>
-        <file>resource/image/mounBT_3.ico</file>
-        <file>resource/image/mounBT_4.ico</file>
         <file>resource/image/double.ico</file>
         <file>resource/image/earth.ico</file>
+        <file>resource/image/tool/constant.ico</file>
+        <file>resource/image/tool/gradient.ico</file>
+        <file>resource/image/tool/layout.ico</file>
+        <file>resource/image/tool/perlin.ico</file>
+        <file>resource/image/tool/radial.ico</file>
+        <file>resource/image/tool/voronoi.ico</file>
+        <file>resource/image/tool/constant.jpg</file>
+        <file>resource/image/tool/gradient.jpg</file>
+        <file>resource/image/tool/layout.jpg</file>
+        <file>resource/image/tool/perlin.jpg</file>
+        <file>resource/image/tool/radial.jpg</file>
+        <file>resource/image/tool/voronoi.jpg</file>
+        <file>resource/image/tool/blur.ico</file>
+        <file>resource/image/tool/blur.jpg</file>
+        <file>resource/image/tool/clamp.ico</file>
+        <file>resource/image/tool/clamp.jpg</file>
+        <file>resource/image/tool/noise.ico</file>
+        <file>resource/image/tool/noise.jpg</file>
+        <file>resource/image/tool/simple.ico</file>
+        <file>resource/image/tool/simple.jpg</file>
+        <file>resource/image/tool/terrace.ico</file>
+        <file>resource/image/tool/terrace.jpg</file>
+        <file>resource/image/tool/constraint.ico</file>
+        <file>resource/image/tool/constraint.jpg</file>
+        <file>resource/image/tool/add.ico</file>
+        <file>resource/image/tool/add.jpg</file>
+        <file>resource/image/tool/divide.ico</file>
+        <file>resource/image/tool/divide.jpg</file>
+        <file>resource/image/tool/invert.ico</file>
+        <file>resource/image/tool/invert.jpg</file>
+        <file>resource/image/tool/multiply.ico</file>
+        <file>resource/image/tool/multiply.jpg</file>
+        <file>resource/image/tool/subtract.ico</file>
+        <file>resource/image/tool/subtract.jpg</file>
+        <file>resource/image/tool/root.ico</file>
+        <file>resource/image/tool/root.jpg</file>
+        <file>resource/image/tool/thermal.jpg</file>
+        <file>resource/image/tool/thermal.ico</file>
+        <file>resource/image/tool/water.ico</file>
+        <file>resource/image/tool/water.jpg</file>
     </qresource>
     <qresource prefix="/xml">
         <file>resource/xml/item.xml</file>

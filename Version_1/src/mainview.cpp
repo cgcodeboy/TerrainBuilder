@@ -72,8 +72,14 @@ void MainView::mousePressEvent(QMouseEvent *event)
                         midPoint.setX(startPoint.x());
                         midPoint.setY(endPoint.y());
                     }
-                    scene->addLine(startPoint.x(),startPoint.y(),midPoint.x(),midPoint.y(),QPen(Qt::black));
-                    scene->addLine(midPoint.x(),midPoint.y(),endPoint.x(),endPoint.y(),QPen(Qt::black));
+
+                    QGraphicsLineItem* line_1 = new QGraphicsLineItem(startPoint.x(),startPoint.y(),midPoint.x(),midPoint.y());
+                    QGraphicsLineItem* line_2 = new QGraphicsLineItem(midPoint.x(),midPoint.y(),endPoint.x(),endPoint.y());
+                    line_1->setPen(QPen(Qt::black));
+                    line_2->setPen(QPen(Qt::black));
+
+                    scene->addItem(line_1);
+                    scene->addItem(line_2);
                     qDebug()<<"draw a line";
                     startItem = nullptr;
                     endItem = nullptr;
@@ -87,26 +93,31 @@ void MainView::mousePressEvent(QMouseEvent *event)
         }
     }
 
+    QPoint point = event->pos();
     switch (cur_type) {
     case ITEM_TYPE::Constant_Generator:{
-        QPoint point = event->pos();
         qDebug()<<point.x()<<point.y();
         addItem(ITEM_TYPE::Constant_Generator,point.x(), point.y());
         break;
     }
     case ITEM_TYPE::Gradient_Generator:{
-        QPoint point = event->pos();
         addItem(ITEM_TYPE::Gradient_Generator,point.x(),point.y());
         break;
     }
     case ITEM_TYPE::Perlin_Generator:{
-        QPoint point = event->pos();
         addItem(ITEM_TYPE::Perlin_Generator,point.x(),point.y());
         break;
     }
     case ITEM_TYPE::Layout_Generator:{
-        QPoint point = event->pos();
         addItem(ITEM_TYPE::Layout_Generator,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::Radial_Generator:{
+        addItem(ITEM_TYPE::Radial_Generator,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::Voronoi_Generator:{
+        addItem(ITEM_TYPE::Voronoi_Generator,point.x(),point.y());
         break;
     }
     default:

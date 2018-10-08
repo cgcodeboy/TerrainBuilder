@@ -1,6 +1,6 @@
 #include "include/generator.h"
 
-Generator::Generator()
+Generator::Generator(ITEM_TYPE type):Item(type)
 {
 
 }
@@ -10,7 +10,7 @@ void Generator::paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
 
 }
 
-void Generator::generate()
+void Generator::heightDataProcess()
 {
 
 }

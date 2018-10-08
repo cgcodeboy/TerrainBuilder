@@ -1,6 +1,6 @@
 #include "include/divide.h"
 
-Divide::Divide()
+Divide::Divide():Math(ITEM_TYPE::Divide_Math)
 {
 
 }

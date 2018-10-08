@@ -1,6 +1,6 @@
 #include "include/heightoutput.h"
 
-HeightOutput::HeightOutput()
+HeightOutput::HeightOutput():Output(ITEM_TYPE::HeightField_Output)
 {
 
 }

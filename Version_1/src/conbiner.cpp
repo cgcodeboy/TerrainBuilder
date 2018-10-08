@@ -1,6 +1,6 @@
 #include "include/conbiner.h"
 
-Conbiner::Conbiner()
+Conbiner::Conbiner(ITEM_TYPE type):Item(type)
 {
 
 }

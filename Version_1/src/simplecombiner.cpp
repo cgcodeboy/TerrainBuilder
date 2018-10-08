@@ -1,6 +1,6 @@
 #include "include/simplecombiner.h"
 
-SimpleCombiner::SimpleCombiner()
+SimpleCombiner::SimpleCombiner():Conbiner(ITEM_TYPE::Simple_Conbiner)
 {
 
 }

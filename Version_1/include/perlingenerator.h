@@ -7,15 +7,28 @@ Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
 
 #include <include/generator.h>
 #include <include/perlinwidget.h>
+#include <include/perlinnoise.h>
 
-class PerlinGenerator : public Generator
+class PerlinGenerator: public Generator
 {
+    Q_OBJECT
 public:
     PerlinGenerator();
 
     QRectF boundingRect() const;
 
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+
+private:
+    virtual void heightDataProcess();
+
+    CImg<unsigned char> m_heightData;
+
+    float _persistence;
+    int _octaves;
+
+private slots:
+    void infoCome(float persistence,int octaves);
 
 protected:
     virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event);

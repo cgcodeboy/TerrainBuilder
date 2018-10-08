@@ -1,16 +1,16 @@
 #include "include/thermal.h"
 
-Thermal::Thermal()
+ThermalErosion::ThermalErosion():Nature(ITEM_TYPE::ThemalErosion_Nature)
 {
 
 }
 
-QRectF Thermal::boundingRect() const
+QRectF ThermalErosion::boundingRect() const
 {
     return QRectF(0,0,100,200);
 }
 
-void Thermal::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+void ThermalErosion::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     if(focused){
         painter->setPen(Qt::green);
@@ -35,19 +35,19 @@ void Thermal::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, Q
     }
 }
 
-void Thermal::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
+void ThermalErosion::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsItem::mouseDoubleClickEvent(event);
 }
 
-void Thermal::focusInEvent(QFocusEvent *event)
+void ThermalErosion::focusInEvent(QFocusEvent *event)
 {
     focused = true;
     update();
     QGraphicsItem::focusInEvent(event);
 }
 
-void Thermal::focusOutEvent(QFocusEvent *event)
+void ThermalErosion::focusOutEvent(QFocusEvent *event)
 {
     focused = false;
     update();

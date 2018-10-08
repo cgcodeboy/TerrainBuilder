@@ -1,6 +1,6 @@
 #include "include\radialgenerator.h"
 
-RadialGenerator::RadialGenerator()
+RadialGenerator::RadialGenerator():Generator(ITEM_TYPE::Radial_Generator)
 {
     focused = false;
     setFlag(ItemIsSelectable,true);

@@ -10,6 +10,10 @@ Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
 #include <include/layoutgenerator.h>
 #include <include/perlingenerator.h>
 #include <include/gradientgenerator.h>
+#include <include/radialgenerator.h>
+#include <include/voronoigenerator.h>
+#include <include/simplecombiner.h>
+#include <include/constraintconbiner.h>
 #include <include/item.h>
 
 class ItemFactory

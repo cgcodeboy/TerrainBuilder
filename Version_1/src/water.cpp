@@ -1,16 +1,16 @@
 #include "include/water.h"
 
-Water::Water()
+WaterErosion::WaterErosion():Nature(ITEM_TYPE::WaterErosion_Nature)
 {
 
 }
 
-QRectF Water::boundingRect() const
+QRectF WaterErosion::boundingRect() const
 {
     return QRectF(0,0,100,200);
 }
 
-void Water::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+void WaterErosion::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
     if(focused){
         painter->setPen(Qt::green);
@@ -35,19 +35,19 @@ void Water::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
     }
 }
 
-void Water::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
+void WaterErosion::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsItem::mouseDoubleClickEvent(event);
 }
 
-void Water::focusInEvent(QFocusEvent *event)
+void WaterErosion::focusInEvent(QFocusEvent *event)
 {
     focused = true;
     update();
     QGraphicsItem::focusInEvent(event);
 }
 
-void Water::focusOutEvent(QFocusEvent *event)
+void WaterErosion::focusOutEvent(QFocusEvent *event)
 {
     focused = false;
     update();

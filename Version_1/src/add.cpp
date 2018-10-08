@@ -1,6 +1,6 @@
 #include "include/add.h"
 
-Add::Add()
+Add::Add():Math(ITEM_TYPE::Add_Math)
 {
 
 }

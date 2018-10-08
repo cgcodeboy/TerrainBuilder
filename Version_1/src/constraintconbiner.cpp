@@ -1,6 +1,6 @@
 #include "include/constraintconbiner.h"
 
-ConstraintConbiner::ConstraintConbiner()
+ConstraintConbiner::ConstraintConbiner():Conbiner(ITEM_TYPE::Constraint_Conbiner)
 {
 
 }

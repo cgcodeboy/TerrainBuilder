@@ -1,6 +1,6 @@
 #include "include/filter.h"
 
-Filter::Filter()
+Filter::Filter(ITEM_TYPE type):Item(type)
 {
 
 }

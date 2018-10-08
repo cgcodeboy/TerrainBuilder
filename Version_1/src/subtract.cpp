@@ -1,6 +1,6 @@
 #include "include/subtract.h"
 
-Subtract::Subtract()
+Subtract::Subtract():Math(ITEM_TYPE::Subtract_Math)
 {
 
 }

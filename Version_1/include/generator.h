@@ -10,11 +10,11 @@ Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
 class Generator : public Item
 {
 public:
-    Generator();
+    Generator(ITEM_TYPE type);
 
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
-    virtual void generate();
+    virtual void heightDataProcess();
 
 protected:
     virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event);

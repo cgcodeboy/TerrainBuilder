@@ -1,6 +1,6 @@
 #include "include/gradientgenerator.h"
 
-GradientGenerator::GradientGenerator()
+GradientGenerator::GradientGenerator():Generator(ITEM_TYPE::Gradient_Generator)
 {
     focused = false;
     setFlag(ItemIsSelectable,true);

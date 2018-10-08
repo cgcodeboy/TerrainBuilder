@@ -1,12 +1,12 @@
-#ifndef WATER_H
-#define WATER_H
+#ifndef WATER_EROSION_H
+#define WATER_EROSION_H
 
 #include <include/nature.h>
 
-class Water : public Nature
+class WaterErosion : public Nature
 {
 public:
-    Water();
+    WaterErosion();
 
     QRectF boundingRect() const;
 

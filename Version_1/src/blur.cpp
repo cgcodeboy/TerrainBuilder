@@ -1,6 +1,6 @@
 #include "include/blur.h"
 
-Blur::Blur()
+Blur::Blur():Filter(ITEM_TYPE::Blur_Filter)
 {
 
 }

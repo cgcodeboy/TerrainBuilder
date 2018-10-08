@@ -1,6 +1,6 @@
 #include "include/nature.h"
 
-Nature::Nature()
+Nature::Nature(ITEM_TYPE type):Item(type)
 {
 
 }

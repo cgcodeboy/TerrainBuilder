@@ -6,7 +6,7 @@
 class Nature : public Item
 {
 public:
-    Nature();
+    Nature(ITEM_TYPE type);
 
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 

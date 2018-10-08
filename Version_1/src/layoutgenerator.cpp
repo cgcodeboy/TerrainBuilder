@@ -1,6 +1,6 @@
 #include "include/layoutgenerator.h"
 
-LayoutGenerator::LayoutGenerator()
+LayoutGenerator::LayoutGenerator():Generator(ITEM_TYPE::Layout_Generator)
 {
     focused = false;
     setFlag(ItemIsSelectable,true);

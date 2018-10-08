@@ -1,6 +1,6 @@
 #include "include/constantgenerator.h"
 
-ConstantGenerator::ConstantGenerator()
+ConstantGenerator::ConstantGenerator():Generator(ITEM_TYPE::Constant_Generator)
 {
     focused = false;
     setFlag(ItemIsSelectable,true);

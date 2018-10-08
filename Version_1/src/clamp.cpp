@@ -1,6 +1,6 @@
 #include "include/clamp.h"
 
-Clamp::Clamp()
+Clamp::Clamp():Filter(ITEM_TYPE::Clamp_Filter)
 {
 
 }

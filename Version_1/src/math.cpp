@@ -1,6 +1,6 @@
 #include "include/math.h"
 
-Math::Math()
+Math::Math(ITEM_TYPE type):Item(type)
 {
 
 }

@@ -1,6 +1,6 @@
 #include "include/output.h"
 
-Output::Output()
+Output::Output(ITEM_TYPE type):Item(type)
 {
 
 }

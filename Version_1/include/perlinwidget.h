@@ -15,6 +15,14 @@ public:
     explicit PerlinWidget(QWidget *parent = 0);
     ~PerlinWidget();
 
+private slots:
+    void on_persistance_SL_valueChanged(int value);
+
+    void on_confirm_BT_clicked();
+
+signals:
+    void infoConfirm(float,int);
+
 private:
     Ui::PerlinWidget *ui;
 };

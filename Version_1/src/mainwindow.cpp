@@ -37,50 +37,105 @@ void MainWindow::on_connect_BT_clicked()
     ui->mainView->setCur_type(ITEM_TYPE::Connect);
 }
 
-void MainWindow::on_type1_BT_clicked()
+void MainWindow::on_constant_Gen_BT_clicked()
 {
     QGraphicsScene *scene = ui->mainView->getScene();
     foreach (QGraphicsItem* item, scene->items(Qt::AscendingOrder)) {
         item->setFlag(QGraphicsItem::ItemIsMovable,false);
     }
-    QString cursor_path(":/icon/resource/image/mounBT_1.ico");
+    QString cursor_path(":/icon/resource/icon/constant.jpg");
     QApplication::restoreOverrideCursor();
     setCursor(QCursor(QPixmap(cursor_path)));
     ui->mainView->setCur_type(ITEM_TYPE::Constant_Generator);
 }
 
-void MainWindow::on_tpye2_BT_clicked()
+void MainWindow::on_layout_Gen_BT_clicked()
 {
+    qDebug()<<"click la la";
     QGraphicsScene *scene = ui->mainView->getScene();
     foreach (QGraphicsItem* item, scene->items(Qt::AscendingOrder)) {
         item->setFlag(QGraphicsItem::ItemIsMovable,false);
     }
-    QString cursor_path(":/icon/resource/image/mounBT_2.ico");
+    QString cursor_path(":/icon/resource/icon/layout.jpg");
     QApplication::restoreOverrideCursor();
     setCursor(QCursor(QPixmap(cursor_path)));
     ui->mainView->setCur_type(ITEM_TYPE::Layout_Generator);
 }
 
-void MainWindow::on_type3_BT_clicked()
+void MainWindow::on_perlin_Gen_BT_clicked()
 {
     QGraphicsScene *scene = ui->mainView->getScene();
     foreach (QGraphicsItem* item, scene->items(Qt::AscendingOrder)) {
         item->setFlag(QGraphicsItem::ItemIsMovable,false);
     }
-    QString cursor_path(":/icon/resource/image/mounBT_3.ico");
+    QString cursor_path(":/icon/resource/icon/perlin.jpg");
     QApplication::restoreOverrideCursor();
     setCursor(QCursor(QPixmap(cursor_path)));
     ui->mainView->setCur_type(ITEM_TYPE::Perlin_Generator);
 }
 
-void MainWindow::on_type4_BT_clicked()
+void MainWindow::on_gradient_Gen_BT_clicked()
 {
     QGraphicsScene *scene = ui->mainView->getScene();
     foreach (QGraphicsItem* item, scene->items(Qt::AscendingOrder)) {
         item->setFlag(QGraphicsItem::ItemIsMovable,false);
     }
-    QString cursor_path(":/icon/resource/image/mounBT_4.ico");
+    QString cursor_path(":/icon/resource/icon/gradient.jpg");
     QApplication::restoreOverrideCursor();
     setCursor(QCursor(QPixmap(cursor_path)));
     ui->mainView->setCur_type(ITEM_TYPE::Gradient_Generator);
+}
+
+void MainWindow::on_radial_Gen_BT_clicked()
+{
+    QGraphicsScene *scene = ui->mainView->getScene();
+    foreach (QGraphicsItem* item, scene->items(Qt::AscendingOrder)) {
+        item->setFlag(QGraphicsItem::ItemIsMovable,false);
+    }
+    QString cursor_path(":/icon/resource/icon/radial.jpg");
+    QApplication::restoreOverrideCursor();
+    setCursor(QCursor(QPixmap(cursor_path)));
+    ui->mainView->setCur_type(ITEM_TYPE::Radial_Generator);
+}
+
+void MainWindow::on_voronoi_Gen_BT_clicked()
+{
+    QGraphicsScene *scene = ui->mainView->getScene();
+    foreach (QGraphicsItem* item, scene->items(Qt::AscendingOrder)) {
+        item->setFlag(QGraphicsItem::ItemIsMovable,false);
+    }
+    QString cursor_path(":/icon/resource/icon/voronoi.jpg");
+    QApplication::restoreOverrideCursor();
+    setCursor(QCursor(QPixmap(cursor_path)));
+    ui->mainView->setCur_type(ITEM_TYPE::Voronoi_Generator);
+}
+
+void MainWindow::on_simple_Con_BT_clicked()
+{
+
+}
+
+void MainWindow::on_complex_Con_BT_clicked()
+{
+
+}
+
+void MainWindow::on_blur_Filter_BT_clicked()
+{
+
+}
+
+void MainWindow::on_clamp_Filter_BT_clicked()
+{
+
+}
+
+void MainWindow::on_noise_Filter_BT_clicked()
+{
+
+}
+
+void MainWindow::on_terrace_Filter_BT_clicked()
+{
+
 }

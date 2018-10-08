@@ -1,12 +1,12 @@
-#ifndef THERMAL_H
-#define THERMAL_H
+#ifndef THERMAL_EROSION_H
+#define THERMAL_EROSION_H
 
 #include <include/nature.h>
 
-class Thermal : public Nature
+class ThermalErosion : public Nature
 {
 public:
-    Thermal();
+    ThermalErosion();
 
     QRectF boundingRect() const;
 

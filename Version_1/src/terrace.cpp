@@ -1,6 +1,6 @@
 #include "include/terrace.h"
 
-Terrace::Terrace()
+Terrace::Terrace():Filter(ITEM_TYPE::Terrace_Filter)
 {
 
 }

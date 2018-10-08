@@ -10,7 +10,7 @@ Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
 class Conbiner : public Item
 {
 public:
-    Conbiner();
+    Conbiner(ITEM_TYPE type);
 
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
