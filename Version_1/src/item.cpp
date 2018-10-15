@@ -48,3 +48,8 @@ void Item::focusOutEvent(QFocusEvent *event)
     QGraphicsItem::focusOutEvent(event);
 }
 
+void Item::processHeightData()
+{
+
+}
+

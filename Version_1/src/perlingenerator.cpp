@@ -1,10 +1,17 @@
 #include "include/perlingenerator.h"
 
+int PerlinGenerator::counterNum = 0;
+
 PerlinGenerator::PerlinGenerator():Generator(ITEM_TYPE::Perlin_Generator)
 {
     focused = false;
     setFlag(ItemIsSelectable,true);
     setFlag(ItemIsFocusable,true);
+
+    setName("PerlinGenerator"+QString::number(counterNum));
+
+    _perlin = new PerlinWidget;
+    connect(_perlin,SIGNAL(infoConfirm(float,int)),this,SLOT(infoCome(float,int)));
 }
 
 QRectF PerlinGenerator::boundingRect() const
@@ -39,7 +46,14 @@ void PerlinGenerator::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
 
 void PerlinGenerator::heightDataProcess()
 {
-
+    m_heightData.assign(512,512,1,1);
+    PerlinNoise* noise = PerlinNoise::getInstance();
+    for (int i = 0; i < 512; i++){
+        for (int j = 0; j < 512; j++){
+            m_heightData(i, j, 0, 0) = noise->getNoiseValue(i,j)*256;
+        }
+    }
+    m_heightData.save_bmp(("./tmp/image/"+getName()+".bmp").toStdString().c_str());
 }
 
 void PerlinGenerator::infoCome(float persistence, int octaves)
@@ -49,14 +63,13 @@ void PerlinGenerator::infoCome(float persistence, int octaves)
     qDebug()<<persistence<<octaves;
     PerlinNoise::setPersistence(persistence);
     PerlinNoise::setNumOfOctaves(octaves);
+    heightDataProcess();
 }
 
 void PerlinGenerator::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsItem::mouseDoubleClickEvent(event);
-    PerlinWidget *perlin = new PerlinWidget;
-    connect(perlin,SIGNAL(infoConfirm(float,int)),this,SLOT(infoCome(float,int)));
-    perlin->show();
+    _perlin->show();
 }
 
 void PerlinGenerator::focusInEvent(QFocusEvent *event)

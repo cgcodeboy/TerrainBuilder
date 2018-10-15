@@ -7,6 +7,7 @@ Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
 
 #include <QMainWindow>
 #include <QGraphicsScene>
+#include <QDir>
 
 namespace Ui {
 class MainWindow;

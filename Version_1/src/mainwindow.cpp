@@ -8,6 +8,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     ui->mainView->initBluePrint();
+
+    QDir dir;
+    if (!dir.exists("./tmp/image/"))
+    {
+        dir.mkpath("./tmp/image/");
+    }
 }
 
 MainWindow::~MainWindow()
@@ -51,7 +57,7 @@ void MainWindow::on_constant_Gen_BT_clicked()
 
 void MainWindow::on_layout_Gen_BT_clicked()
 {
-    qDebug()<<"click la la";
+//    qDebug()<<"click la la";
     QGraphicsScene *scene = ui->mainView->getScene();
     foreach (QGraphicsItem* item, scene->items(Qt::AscendingOrder)) {
         item->setFlag(QGraphicsItem::ItemIsMovable,false);

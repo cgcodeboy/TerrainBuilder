@@ -31,6 +31,9 @@ void MainView::setCur_type(const ITEM_TYPE value)
     }
 }
 
+/*brief: So many bugs!!! wait to correct the logic!
+ *       When click a item, if it's connect status, we should connect two item together.
+ */
 void MainView::mousePressEvent(QMouseEvent *event)
 {
     //如果是右键点击，说明放弃当前
@@ -45,16 +48,18 @@ void MainView::mousePressEvent(QMouseEvent *event)
     if(cur_type == ITEM_TYPE::Connect){
         if(!startItem){
             QPoint point = event->pos();
-            qDebug()<<"start"<<point.x()<<point.y();
-            startItem = scene->itemAt(QPoint(point.x(),point.y()),QTransform());
+//            qDebug()<<"start"<<point.x()<<point.y();
+            //wait to correct!!
+            startItem = dynamic_cast<Item*>(scene->itemAt(QPoint(point.x(),point.y()),QTransform()));
             QGraphicsView::mousePressEvent(event);
             return;
         }
-        qDebug()<<"hello";
+//        qDebug()<<"hello";
         if(!endItem){
             QPoint point = event->pos();
-            qDebug()<<"end"<<point.x()<<point.y();
-            endItem = scene->itemAt(QPoint(point.x(),point.y()),QTransform());
+//            qDebug()<<"end"<<point.x()<<point.y();
+            //wait to correct!!
+            endItem = dynamic_cast<Item*>(scene->itemAt(QPoint(point.x(),point.y()),QTransform()));
             if(endItem){
                 if(startItem!=endItem){
                     //                    if(startItem->pos().x()<endItem->pos().x()){
@@ -62,25 +67,30 @@ void MainView::mousePressEvent(QMouseEvent *event)
 
                     //                        }
                     //                    }
-                    QPoint startPoint(startItem->pos().x()+30,startItem->pos().y()+20);
-                    QPoint endPoint(endItem->pos().x()+30,endItem->pos().y()+20);
-                    QPoint midPoint;
-                    if(abs(startPoint.x() - endPoint.x())>abs(startPoint.y() - endPoint.y())){
-                        midPoint.setX(endPoint.x());
-                        midPoint.setY(startPoint.y());
-                    }else{
-                        midPoint.setX(startPoint.x());
-                        midPoint.setY(endPoint.y());
-                    }
+                    QPoint startPoint(startItem->pos().x()+50,startItem->pos().y()+25);
+                    QPoint endPoint(endItem->pos().x()+50,endItem->pos().y()+25);
+//                    QPoint midPoint;
+//                    if(abs(startPoint.x() - endPoint.x())>abs(startPoint.y() - endPoint.y())){
+//                        midPoint.setX(endPoint.x());
+//                        midPoint.setY(startPoint.y());
+//                    }else{
+//                        midPoint.setX(startPoint.x());
+//                        midPoint.setY(endPoint.y());
+//                    }
+                    QPoint controlPoint_1,controlPoint_2;
+                    controlPoint_1.setX((startPoint.x()+endPoint.x())/2);
+                    controlPoint_2.setX((startPoint.x()+endPoint.x())/2);
+                    controlPoint_1.setY(startPoint.y());
+                    controlPoint_2.setY(endPoint.y());
+//                    if(startPoint.x()<endPoint.x()){
 
-                    QGraphicsLineItem* line_1 = new QGraphicsLineItem(startPoint.x(),startPoint.y(),midPoint.x(),midPoint.y());
-                    QGraphicsLineItem* line_2 = new QGraphicsLineItem(midPoint.x(),midPoint.y(),endPoint.x(),endPoint.y());
-                    line_1->setPen(QPen(Qt::black));
-                    line_2->setPen(QPen(Qt::black));
-
-                    scene->addItem(line_1);
-                    scene->addItem(line_2);
-                    qDebug()<<"draw a line";
+//                    }
+//                    else{
+//                        controlPoint_1.setY(endPoint.y());
+//                        controlPoint_2.setY(startPoint.y());
+//                    }
+                    BezierLine *line = new BezierLine(startPoint,endPoint,controlPoint_1,controlPoint_2);
+                    scene->addItem(line);
                     startItem = nullptr;
                     endItem = nullptr;
                 }
@@ -96,7 +106,7 @@ void MainView::mousePressEvent(QMouseEvent *event)
     QPoint point = event->pos();
     switch (cur_type) {
     case ITEM_TYPE::Constant_Generator:{
-        qDebug()<<point.x()<<point.y();
+//        qDebug()<<point.x()<<point.y();
         addItem(ITEM_TYPE::Constant_Generator,point.x(), point.y());
         break;
     }

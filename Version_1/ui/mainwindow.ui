@@ -40,7 +40,7 @@
         </property>
         <widget class="QWidget" name="tab">
          <attribute name="title">
-          <string>Tab 1</string>
+          <string>Macros</string>
          </attribute>
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
@@ -74,8 +74,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>109</width>
-               <height>89</height>
+               <width>126</width>
+               <height>90</height>
               </rect>
              </property>
              <attribute name="label">
@@ -255,8 +255,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>109</width>
-               <height>89</height>
+               <width>126</width>
+               <height>90</height>
               </rect>
              </property>
              <attribute name="label">
@@ -274,7 +274,7 @@
                    <x>0</x>
                    <y>0</y>
                    <width>106</width>
-                   <height>60</height>
+                   <height>70</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -337,8 +337,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>109</width>
-               <height>89</height>
+               <width>126</width>
+               <height>90</height>
               </rect>
              </property>
              <attribute name="label">
@@ -467,8 +467,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>109</width>
-               <height>89</height>
+               <width>126</width>
+               <height>90</height>
               </rect>
              </property>
              <attribute name="label">
@@ -645,8 +645,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>109</width>
-               <height>89</height>
+               <width>126</width>
+               <height>90</height>
               </rect>
              </property>
              <attribute name="label">
@@ -664,7 +664,7 @@
                    <x>0</x>
                    <y>0</y>
                    <width>106</width>
-                   <height>60</height>
+                   <height>70</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -728,7 +728,7 @@
                <x>0</x>
                <y>0</y>
                <width>126</width>
-               <height>70</height>
+               <height>90</height>
               </rect>
              </property>
              <attribute name="label">
@@ -765,7 +765,7 @@
         </property>
         <widget class="QWidget" name="tab_3">
          <attribute name="title">
-          <string>Tab 1</string>
+          <string>Attributes</string>
          </attribute>
         </widget>
         <widget class="QWidget" name="tab_4">

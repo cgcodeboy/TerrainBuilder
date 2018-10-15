@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui qml quick xml
+QT       += core gui xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -43,10 +43,13 @@ SOURCES += src\main.cpp\
     src\multiply.cpp \
     src\divide.cpp \
     src\invert.cpp \
-    src\customergenerator.cpp \
     src\nature.cpp \
     src\water.cpp \
     src\thermal.cpp \
+    src\perlinnoise.cpp \
+    src\itemcollector.cpp \
+    src\bezierline.cpp \
+    src\addwidget.cpp
 
 HEADERS  += include\mainwindow.h \
     include\mainview.h \
@@ -78,16 +81,24 @@ HEADERS  += include\mainwindow.h \
     include\multiply.h \
     include\divide.h \
     include\invert.h \
-    include\customergenerator.h \
     include\nature.h \
     include\water.h \
-    include\thermal.h
+    include\thermal.h \
+    include\perlinnoise.h \
+    include\itemcollector.h \
+    include\bezierline.h \
+    include\addwidget.h
 
 FORMS    += ui\mainwindow.ui \
-    ui\perlinwidget.ui
+    ui\perlinwidget.ui \
+    ui\addwidget.ui
 
 RESOURCES += \
     resource.qrc
 
 DISTFILES += \
     resource/item.xml
+
+INCLUDEPATH += D:\CImg-2.2.2
+
+LIBS += -lgdi32 -luser32

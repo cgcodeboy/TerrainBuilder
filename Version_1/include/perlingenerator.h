@@ -27,6 +27,10 @@ private:
     float _persistence;
     int _octaves;
 
+    PerlinWidget* _perlin;
+
+    static int counterNum;
+
 private slots:
     void infoCome(float persistence,int octaves);
 

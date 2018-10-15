@@ -10,9 +10,8 @@ Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
 #include <QGraphicsScene>
 #include <QMouseEvent>
 #include <QDebug>
-#include <QQmlEngine>
-#include <QQmlComponent>
 #include <include/itemfactory.h>
+#include <include/bezierline.h>
 
 using namespace std;
 
@@ -31,8 +30,8 @@ public:
 private:
     QGraphicsScene *scene;
     ITEM_TYPE cur_type;
-    QGraphicsItem* startItem;
-    QGraphicsItem* endItem;
+    Item* startItem;
+    Item* endItem;
     ItemFactory *itembuilder;
     bool connectState;
 

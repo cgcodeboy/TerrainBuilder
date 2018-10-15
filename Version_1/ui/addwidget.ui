@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>PerlinWidget</class>
- <widget class="QWidget" name="PerlinWidget">
+ <class>AddWidget</class>
+ <widget class="QWidget" name="AddWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>301</width>
-    <height>367</height>
+    <width>294</width>
+    <height>274</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Perlin Generator</string>
+   <string>Form</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -40,7 +40,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Perlin Generator</string>
+        <string>Add Math Function</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -74,39 +74,12 @@
      <item>
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>persistence:</string>
+        <string>Add value:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QSlider" name="persistance_SL">
-       <property name="singleStep">
-        <number>0</number>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="tickPosition">
-        <enum>QSlider::TicksBelow</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLCDNumber" name="persistance_LCD"/>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
-     <item>
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>octaves:    </string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QSlider" name="octaves_SL">
+      <widget class="QSlider" name="addValue_SL">
        <property name="maximum">
         <number>10</number>
        </property>
@@ -119,14 +92,14 @@
       </widget>
      </item>
      <item>
-      <widget class="QLCDNumber" name="octaves_LCD"/>
+      <widget class="QLCDNumber" name="addValue_LCD"/>
      </item>
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
-      <spacer name="horizontalSpacer_4">
+      <spacer name="horizontalSpacer_3">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -146,7 +119,7 @@
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_3">
+      <spacer name="horizontalSpacer_4">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -168,7 +141,7 @@
      <property name="sizeHint" stdset="0">
       <size>
        <width>20</width>
-       <height>169</height>
+       <height>181</height>
       </size>
      </property>
     </spacer>
@@ -178,34 +151,18 @@
  <resources/>
  <connections>
   <connection>
-   <sender>octaves_SL</sender>
+   <sender>addValue_SL</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>octaves_LCD</receiver>
+   <receiver>addValue_LCD</receiver>
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>171</x>
-     <y>101</y>
+     <x>93</x>
+     <y>61</y>
     </hint>
     <hint type="destinationlabel">
-     <x>293</x>
-     <y>109</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>octaves_SL</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>octaves_LCD</receiver>
-   <slot>display(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>164</x>
-     <y>100</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>305</x>
-     <y>107</y>
+     <x>257</x>
+     <y>58</y>
     </hint>
    </hints>
   </connection>

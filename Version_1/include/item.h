@@ -10,10 +10,12 @@ Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
 #include <QPainter>
 #include <QString>
 #include <QList>
+#include <include/bezierline.h>
 
 #include <CImg.h>
 
 using namespace cimg_library;
+#define cimg_use_bmp
 
 enum ITEM_TYPE{
     Arrow,
@@ -43,6 +45,7 @@ enum ITEM_TYPE{
 
 class Item :public QObject, public QGraphicsItem
 {
+    Q_OBJECT
 public:
     Item(ITEM_TYPE type,QGraphicsItem *parent = 0);
 
@@ -57,8 +60,8 @@ private:
     ITEM_TYPE m_type;
 
 signals:
-    void heightDataReady(CImg<unsigned char>);
-    void textureDataReady(CImg<unsigned char>);
+    void heightDataReady(const CImg<unsigned char>&);
+    void textureDataReady(const CImg<unsigned char>&);
 
 
 protected:
@@ -66,10 +69,12 @@ protected:
     virtual void focusInEvent(QFocusEvent *event);
     virtual void focusOutEvent(QFocusEvent *event);
 
+    virtual void processHeightData();
+
     bool focused;
     QString m_name;
-    QList<QGraphicsLineItem*> m_inLineList;
-    QList<QGraphicsLineItem*> m_outLineList;
+    QList<BezierLine*> m_inLineList;
+    QList<BezierLine*> m_outLineList;
 };
 
 #endif // ITEM_H
