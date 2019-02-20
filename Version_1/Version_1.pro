@@ -49,7 +49,8 @@ SOURCES += src\main.cpp\
     src\perlinnoise.cpp \
     src\itemcollector.cpp \
     src\bezierline.cpp \
-    src\addwidget.cpp
+    src\addwidget.cpp \
+    src\constantwidget.cpp
 
 HEADERS  += include\mainwindow.h \
     include\mainview.h \
@@ -87,11 +88,13 @@ HEADERS  += include\mainwindow.h \
     include\perlinnoise.h \
     include\itemcollector.h \
     include\bezierline.h \
-    include\addwidget.h
+    include\addwidget.h \
+    include\constantwidget.h
 
 FORMS    += ui\mainwindow.ui \
     ui\perlinwidget.ui \
-    ui\addwidget.ui
+    ui\addwidget.ui \
+    ui\constantwidget.ui
 
 RESOURCES += \
     resource.qrc
