@@ -1,33 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Items>
     <Item>
-        <Item_type></Item_type>
+        <Item_type>Constant_Generator</Item_type>
         <InputParameters>
-            <Parameter>
-                <Name></Name>
-                <Type><Type>
-            </Parameter>
         </InputParameters>
         <OutputParameters>
             <Parameter>
-                <Name></Name>
-                <Type><Type>
+                <Name>HeightValue</Name>
+                <Type>Integer<Type>
             </Parameter>
         <OutputParameters>
     </Item>
 
     <Item>
-        <Item_type></Item_type>
+        <Item_type>Gradient_Generator</Item_type>
         <InputParameters>
-            <Parameter>
-                <Name></Name>
-                <Type><Type>
-            </Parameter>
         </InputParameters>
         <OutputParameters>
             <Parameter>
-                <Name></Name>
-                <Type><Type>
+                <Name>HeightValue</Name>
+                <Type>Integer<Type>
+            </Parameter>
+        <OutputParameters>
+    </Item>
+
+    <Item>
+        <Item_type>Layout_Generator</Item_type>
+        <InputParameters>
+        </InputParameters>
+        <OutputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer<Type>
+            </Parameter>
+        <OutputParameters>
+    </Item>
+
+    <Item>
+        <Item_type>Perlin_Generator</Item_type>
+        <InputParameters>
+        </InputParameters>
+        <OutputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer<Type>
+            </Parameter>
+        <OutputParameters>
+    </Item>
+
+    <Item>
+        <Item_type>Radial_Generator</Item_type>
+        <InputParameters>
+        </InputParameters>
+        <OutputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer<Type>
+            </Parameter>
+        <OutputParameters>
+    </Item>
+
+    <Item>
+        <Item_type>Voronoi_Generator</Item_type>
+        <InputParameters>
+        </InputParameters>
+        <OutputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer<Type>
             </Parameter>
         <OutputParameters>
     </Item>
