@@ -1,10 +1,19 @@
 #include "include/constantgenerator.h"
 
+int ConstantGenerator::counterNum = 0;
+
 ConstantGenerator::ConstantGenerator():Generator(ITEM_TYPE::Constant_Generator)
 {
     focused = false;
     setFlag(ItemIsSelectable,true);
     setFlag(ItemIsFocusable,true);
+
+    _number = counterNum;
+    setName("ConstantGenerator"+QString::number(_number));
+    counterNum++;
+
+    _constant = new ConstantWidget();
+    connect(_constant,SIGNAL(infoConfirm(int)),this,SLOT(infoCome(int)));
 }
 
 QRectF ConstantGenerator::boundingRect() const
@@ -37,9 +46,27 @@ void ConstantGenerator::paint(QPainter *painter, const QStyleOptionGraphicsItem 
     }
 }
 
+void ConstantGenerator::heightDataProcess()
+{
+    m_heightData.assign(255,255,1,1);
+    for (int i = 0; i < 255; i++){
+        for (int j = 0; j < 255; j++){
+            m_heightData(i, j, 0, 0) = _constantValue;
+        }
+    }
+    m_heightData.save_bmp(("./tmp/image/"+getName()+".bmp").toStdString().c_str());
+}
+
+void ConstantGenerator::infoCome(int value)
+{
+    _constantValue = value;
+    heightDataProcess();
+}
+
 void ConstantGenerator::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsItem::mouseDoubleClickEvent(event);
+    _constant->show();
 }
 
 void ConstantGenerator::focusInEvent(QFocusEvent *event)
