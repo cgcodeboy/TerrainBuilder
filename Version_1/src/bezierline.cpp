@@ -27,7 +27,7 @@ QRectF BezierLine::boundingRect() const
         return QRect(_endPoint,_startPoint);
 }
 
-CImg<unsigned char> &BezierLine::getData() const
+CImg<unsigned char> BezierLine::getData() const
 {
     return this->m_heightData;
 }

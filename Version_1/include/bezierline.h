@@ -19,7 +19,7 @@ public:
 
     QRectF boundingRect() const;
 
-    CImg<unsigned char>& getData() const;
+    CImg<unsigned char> getData() const;
 
 signals:
     void dataReady();
