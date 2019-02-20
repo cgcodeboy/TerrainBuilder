@@ -5,8 +5,8 @@
 &emsp;**1. Generator**
 > The generator is used to generator the origin terrain data, maybe I will use perlin、vonoroi and other easy algorithms like constant、gradient、radial grad. The user can also draw the origin terrain data in a blank file.
 
-&emsp;**2. Conbiner**
-> The conbiner is used to conbine several items which have the same output format, and then it will use the inner algorithm to produce a new output which has the same format as the input. Now I decide to design two kind of conbiner, including simple conbiner and constraint conbiner. The former just conbine two input together, but the latter will have a constraint parameter.
+&emsp;**2. Combiner**
+> The Combiner is used to conbine several items which have the same output format, and then it will use the inner algorithm to produce a new output which has the same format as the input. Now I decide to design two kind of conbiner, including simple Combiner and constraint Combiner. The former just conbine two input together, but the latter will have a constraint parameter.
 
 &emsp;**3. Filter**
 > The filter is used to make some change to the input data. For example, terrace、clamp、add noise、blur and etc.
