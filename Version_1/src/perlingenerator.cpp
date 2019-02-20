@@ -8,10 +8,12 @@ PerlinGenerator::PerlinGenerator():Generator(ITEM_TYPE::Perlin_Generator)
     setFlag(ItemIsSelectable,true);
     setFlag(ItemIsFocusable,true);
 
-    setName("PerlinGenerator"+QString::number(counterNum));
+    _number = counterNum;
+    setName("PerlinGenerator"+QString::number(_number));
+    counterNum++;
 
     _perlin = new PerlinWidget;
-    connect(_perlin,SIGNAL(infoConfirm(float,int)),this,SLOT(infoCome(float,int)));
+    connect(_perlin,SIGNAL(infoConfirm(float,float,float,int,int)),this,SLOT(infoCome(float,float,float,int,int)));
 }
 
 QRectF PerlinGenerator::boundingRect() const
@@ -46,23 +48,24 @@ void PerlinGenerator::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
 
 void PerlinGenerator::heightDataProcess()
 {
-    m_heightData.assign(512,512,1,1);
-    PerlinNoise* noise = PerlinNoise::getInstance();
-    for (int i = 0; i < 512; i++){
-        for (int j = 0; j < 512; j++){
-            m_heightData(i, j, 0, 0) = noise->getNoiseValue(i,j)*256;
+    m_heightData.assign(255,255,1,1);
+    for (int i = 0; i < 255; i++){
+        for (int j = 0; j < 255; j++){
+            m_heightData(i, j, 0, 0) = noise->getNoiseValue(i,j);
         }
     }
     m_heightData.save_bmp(("./tmp/image/"+getName()+".bmp").toStdString().c_str());
 }
 
-void PerlinGenerator::infoCome(float persistence, int octaves)
+void PerlinGenerator::infoCome(float persistence, float frequency, float amplitude, int octaves, int randomseed)
 {
-    this->_persistence = persistence;
-    this->_octaves = octaves;
     qDebug()<<persistence<<octaves;
-    PerlinNoise::setPersistence(persistence);
-    PerlinNoise::setNumOfOctaves(octaves);
+    noise = new PerlinNoise();
+    noise->setPersistence(persistence);
+    noise->setOctaves(octaves);
+    noise->setAmplitude(amplitude);
+    noise->setFrequency(frequency);
+    noise->setRandomSeed(randomseed);
     heightDataProcess();
 }
 

@@ -23,16 +23,14 @@ private:
     virtual void heightDataProcess();
 
     CImg<unsigned char> m_heightData;
-
-    float _persistence;
-    int _octaves;
-
     PerlinWidget* _perlin;
+    PerlinNoise* noise;
 
     static int counterNum;
+    int _number;
 
 private slots:
-    void infoCome(float persistence,int octaves);
+    void infoCome(float persistence,float frequency,float amplitude,int octaves,int randomseed);
 
 protected:
     virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event);

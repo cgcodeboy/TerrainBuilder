@@ -14,12 +14,7 @@ PerlinWidget::~PerlinWidget()
     delete ui;
 }
 
-void PerlinWidget::on_persistance_SL_valueChanged(int value)
-{
-    ui->persistance_LCD->display(static_cast<double>(value)/100);
-}
-
 void PerlinWidget::on_confirm_BT_clicked()
 {
-    emit infoConfirm(ui->persistance_LCD->value(),ui->octaves_LCD->value());
+    emit infoConfirm(ui->persistance_LCD->value(),ui->frequency_LCD->value(),ui->amplitude_LCD->value(),ui->octaves_LCD->value(),ui->randomseed_LCD->value());
 }

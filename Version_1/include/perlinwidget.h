@@ -16,12 +16,11 @@ public:
     ~PerlinWidget();
 
 private slots:
-    void on_persistance_SL_valueChanged(int value);
 
     void on_confirm_BT_clicked();
 
 signals:
-    void infoConfirm(float,int);
+    void infoConfirm(float,float,float,int,int);
 
 private:
     Ui::PerlinWidget *ui;

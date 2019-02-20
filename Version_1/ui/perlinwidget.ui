@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>301</width>
-    <height>367</height>
+    <height>353</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -80,6 +80,9 @@
      </item>
      <item>
       <widget class="QSlider" name="persistance_SL">
+       <property name="maximum">
+        <number>10</number>
+       </property>
        <property name="singleStep">
         <number>0</number>
        </property>
@@ -92,7 +95,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLCDNumber" name="persistance_LCD"/>
+      <widget class="QLCDNumber" name="persistance_LCD">
+       <property name="smallDecimalPoint">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -120,6 +127,87 @@
      </item>
      <item>
       <widget class="QLCDNumber" name="octaves_LCD"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>amplitude:  </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="amplitude_SL_">
+       <property name="maximum">
+        <number>255</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="amplitude_LCD"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>frequency:  </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="frequency_SL">
+       <property name="maximum">
+        <number>10</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="frequency_LCD"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>randomseed: </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="randomseed_SL">
+       <property name="maximum">
+        <number>10</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksBelow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLCDNumber" name="randomseed_LCD"/>
      </item>
     </layout>
    </item>
@@ -188,8 +276,8 @@
      <y>101</y>
     </hint>
     <hint type="destinationlabel">
-     <x>293</x>
-     <y>109</y>
+     <x>241</x>
+     <y>108</y>
     </hint>
    </hints>
   </connection>
@@ -204,8 +292,72 @@
      <y>100</y>
     </hint>
     <hint type="destinationlabel">
-     <x>305</x>
-     <y>107</y>
+     <x>241</x>
+     <y>108</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>randomseed_SL</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>randomseed_LCD</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>146</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>245</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>persistance_SL</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>persistance_LCD</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>234</x>
+     <y>60</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>amplitude_SL_</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>amplitude_LCD</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>158</x>
+     <y>136</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>251</x>
+     <y>137</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>frequency_SL</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>frequency_LCD</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>155</x>
+     <y>169</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>247</x>
+     <y>169</y>
     </hint>
    </hints>
   </connection>

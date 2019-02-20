@@ -3,34 +3,55 @@
 
 #include <math.h>
 
+/**
+ * @brief The PerlinNoise class
+ *
+ * This class is used to generate the perlin noise.
+ *
+ * Input: persistence and octaves
+ *
+ * Output: perlin noise value
+ */
+
+
 class PerlinNoise
 {
 public:
-    static PerlinNoise* getInstance();
+    PerlinNoise();
 
-    static void setPersistence(float persistence);
+    void set(double persistence, double frequency, double amplitude, int octaves, int randomseed);
 
-    static void setNumOfOctaves(int num);
+    void setPersistence(float persistence);
+
+    void setFrequency(float frequency);
+
+    void setAmplitude(float amplitude);
+
+    void setOctaves(int octaves);
+
+    void setRandomSeed(int randomseed);
 
     float getNoiseValue(float x,float y);
 
 private:
-    PerlinNoise();
     PerlinNoise(PerlinNoise &noise);
     PerlinNoise& operator=(PerlinNoise& noise);
 
-    float interpolatedNoise(float x,float y);
-
     float smoothedNoise(int x,int y);
 
-    float cosine_Interpolate(float x,float y,float z);
+    float total(float i, float j);
 
-    float noise(int x,int y);
+    float getValue(float x, float y);
 
-    static PerlinNoise* _noise;
+    float interpolate(float x, float y, float a);
 
-    static float _persistence;
-    static int _octaves;
+    float noise(int x, int y);
+
+    float _persistence;
+    float _frequency;
+    float _amplitude;
+    int _randomseed;
+    int _octaves;
 };
 
 #endif // PERLINNOISE_H
