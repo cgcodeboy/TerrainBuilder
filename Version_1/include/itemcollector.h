@@ -4,7 +4,7 @@
 #include <list>
 #include <include/item.h>
 #include <include/generator.h>
-#include <include/conbiner.h>
+#include <include/combiner.h>
 #include <include/filter.h>
 #include <include/math.h>
 #include <include/nature.h>
@@ -21,7 +21,7 @@ public:
 
 private:
     list<Generator*>* _generatorList;
-    list<Conbiner*>* _conbinerList;
+    list<Combiner*>* _combinerList;
     list<Filter*>* _filterList;
     list<Math*>* _mathList;
     list<Nature*>* _natureList;

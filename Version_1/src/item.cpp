@@ -48,8 +48,8 @@ void Item::focusOutEvent(QFocusEvent *event)
     QGraphicsItem::focusOutEvent(event);
 }
 
-void Item::processHeightData()
+QString getElemTypeName(ITEM_TYPE type)
 {
-
+    int idx = static_cast<int>(type);
+    return TYPE_NAMES[idx];
 }
-

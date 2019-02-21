@@ -13,7 +13,7 @@ Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
 #include <include/radialgenerator.h>
 #include <include/voronoigenerator.h>
 #include <include/simplecombiner.h>
-#include <include/constraintconbiner.h>
+#include <include/constraintcombiner.h>s
 #include <include/item.h>
 
 class ItemFactory

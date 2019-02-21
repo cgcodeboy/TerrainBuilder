@@ -5,7 +5,7 @@ ItemCollector *ItemCollector::_collector = 0;
 ItemCollector::ItemCollector()
 {
     list<Generator*>* _generatorList = new list<Generator*>;
-    list<Conbiner*>* _conbinerList = new list<Conbiner*>;
+    list<Combiner*>* _combinerList = new list<Combiner*>;
     list<Filter*>* _filterList = new list<Filter*>;
     list<Math*>* _mathList = new list<Math*>;
     list<Nature*>* _natureList = new list<Nature*>;
@@ -35,9 +35,9 @@ void ItemCollector::addItem(Item *item)
         _generatorList->push_back(dynamic_cast<Generator*>(item));
         break;
     }
-    case ITEM_TYPE::Simple_Conbiner:
-    case ITEM_TYPE::Constraint_Conbiner:{
-        _conbinerList->push_back(dynamic_cast<Conbiner*>(item));
+    case ITEM_TYPE::Simple_Combiner:
+    case ITEM_TYPE::Constraint_Combiner:{
+        _combinerList->push_back(dynamic_cast<Combiner*>(item));
         break;
     }
     case ITEM_TYPE::Blur_Filter:
