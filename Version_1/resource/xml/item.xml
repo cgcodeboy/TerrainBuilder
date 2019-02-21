@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Items>
     <Item>
         <Item_type>Constant_Generator</Item_type>
-        <InputParameters>
+        <InputParameters>        
         </InputParameters>
         <OutputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
-                <Type>Integer<Type>
+                <Type>Integer</Type>
             </Parameter>
-        <OutputParameters>
+        </OutputParameters>
     </Item>
 
     <Item>
@@ -19,9 +19,9 @@
         <OutputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
-                <Type>Integer<Type>
+                <Type>Integer</Type>
             </Parameter>
-        <OutputParameters>
+        </OutputParameters>
     </Item>
 
     <Item>
@@ -31,21 +31,25 @@
         <OutputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
-                <Type>Integer<Type>
+                <Type>Integer</Type>
             </Parameter>
-        <OutputParameters>
+        </OutputParameters>
     </Item>
 
     <Item>
         <Item_type>Perlin_Generator</Item_type>
         <InputParameters>
+            <Parameter>
+                <Name>HelloValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
         </InputParameters>
         <OutputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
-                <Type>Integer<Type>
+                <Type>Integer</Type>
             </Parameter>
-        <OutputParameters>
+        </OutputParameters>
     </Item>
 
     <Item>
@@ -55,9 +59,9 @@
         <OutputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
-                <Type>Integer<Type>
+                <Type>Integer</Type>
             </Parameter>
-        <OutputParameters>
+        </OutputParameters>
     </Item>
 
     <Item>
@@ -67,88 +71,264 @@
         <OutputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
-                <Type>Integer<Type>
+                <Type>Integer</Type>
             </Parameter>
-        <OutputParameters>
+        </OutputParameters>
     </Item>
 
     <Item>
-        <Item_type></Item_type>
+        <Item_type>Simple_Combiner</Item_type>
         <InputParameters>
             <Parameter>
-                <Name></Name>
-                <Type><Type>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
             </Parameter>
         </InputParameters>
         <OutputParameters>
             <Parameter>
-                <Name></Name>
-                <Type><Type>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
             </Parameter>
-        <OutputParameters>
+        </OutputParameters>
     </Item>
 
     <Item>
-        <Item_type></Item_type>
+        <Item_type>Constraint_Combiner</Item_type>
         <InputParameters>
             <Parameter>
-                <Name></Name>
-                <Type><Type>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
             </Parameter>
         </InputParameters>
         <OutputParameters>
             <Parameter>
-                <Name></Name>
-                <Type><Type>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
             </Parameter>
-        <OutputParameters>
+        </OutputParameters>
     </Item>
 
     <Item>
-        <Item_type></Item_type>
+        <Item_type>Blur_Filter</Item_type>
         <InputParameters>
             <Parameter>
-                <Name></Name>
-                <Type><Type>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
             </Parameter>
         </InputParameters>
         <OutputParameters>
             <Parameter>
-                <Name></Name>
-                <Type><Type>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
             </Parameter>
-        <OutputParameters>
+        </OutputParameters>
     </Item>
 
     <Item>
-        <Item_type></Item_type>
+        <Item_type>Clamp_Filter</Item_type>
         <InputParameters>
             <Parameter>
-                <Name></Name>
-                <Type><Type>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
             </Parameter>
         </InputParameters>
         <OutputParameters>
             <Parameter>
-                <Name></Name>
-                <Type><Type>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
             </Parameter>
-        <OutputParameters>
+        </OutputParameters>
     </Item>
 
     <Item>
-        <Item_type></Item_type>
+        <Item_type>Noise_Filter</Item_type>
         <InputParameters>
             <Parameter>
-                <Name></Name>
-                <Type><Type>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
             </Parameter>
         </InputParameters>
         <OutputParameters>
             <Parameter>
-                <Name></Name>
-                <Type><Type>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
             </Parameter>
+        </OutputParameters>
+    </Item>
+
+    <Item>
+        <Item_type>Terrace_Filter</Item_type>
+        <InputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </InputParameters>
         <OutputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </OutputParameters>
+    </Item>
+
+    <Item>
+        <Item_type>Add_Math</Item_type>
+        <InputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </InputParameters>
+        <OutputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </OutputParameters>
+    </Item>
+
+    <Item>
+        <Item_type>Subtract_Math</Item_type>
+        <InputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </InputParameters>
+        <OutputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </OutputParameters>
+    </Item>
+
+    <Item>
+        <Item_type>Multiply_Math</Item_type>
+        <InputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </InputParameters>
+        <OutputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </OutputParameters>
+    </Item>
+
+    <Item>
+        <Item_type>Divide_Math</Item_type>
+        <InputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </InputParameters>
+        <OutputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </OutputParameters>
+    </Item>
+
+    <Item>
+        <Item_type>Invert_Math</Item_type>
+        <InputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </InputParameters>
+        <OutputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </OutputParameters>
+    </Item>
+
+    <Item>
+        <Item_type>WaterErosion_Nature</Item_type>
+        <InputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </InputParameters>
+        <OutputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </OutputParameters>
+    </Item>
+
+    <Item>
+        <Item_type>ThemalErosion_Nature</Item_type>
+        <InputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </InputParameters>
+        <OutputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </OutputParameters>
+    </Item>
+
+    <Item>
+        <Item_type>HeightField_Output</Item_type>
+        <InputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </InputParameters>
+        <OutputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </OutputParameters>
+    </Item>
+
+    <Item>
+        <Item_type>Texture_Output</Item_type>
+        <InputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </InputParameters>
+        <OutputParameters>
+            <Parameter>
+                <Name>TextureValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </OutputParameters>
     </Item>
 </Items>

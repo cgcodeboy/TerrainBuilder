@@ -25,9 +25,9 @@ SOURCES += src\main.cpp\
     src\output.cpp \
     src\heightoutput.cpp \
     src\textureoutput.cpp \
-    src\conbiner.cpp \
+    src\combiner.cpp \
     src\simplecombiner.cpp \
-    src\constraintconbiner.cpp \
+    src\constraintcombiner.cpp \
     src\filter.cpp \
     src\perlinwidget.cpp \
     src\iteminquirer.cpp \
@@ -47,10 +47,13 @@ SOURCES += src\main.cpp\
     src\water.cpp \
     src\thermal.cpp \
     src\perlinnoise.cpp \
+    src\perlin.cpp \
     src\itemcollector.cpp \
     src\bezierline.cpp \
     src\addwidget.cpp \
-    src\constantwidget.cpp
+    src\constantwidget.cpp \
+    src\itemdrawmaster.cpp \
+    src\radialwidget.cpp
 
 HEADERS  += include\mainwindow.h \
     include\mainview.h \
@@ -64,9 +67,9 @@ HEADERS  += include\mainwindow.h \
     include\output.h \
     include\heightoutput.h \
     include\textureoutput.h \
-    include\conbiner.h \
+    include\combiner.h \
     include\simplecombiner.h \
-    include\constraintconbiner.h \
+    include\constraintcombiner.h \
     include\filter.h \
     include\perlinwidget.h \
     include\iteminquirer.h \
@@ -86,15 +89,19 @@ HEADERS  += include\mainwindow.h \
     include\water.h \
     include\thermal.h \
     include\perlinnoise.h \
+    include\perlin.h \
     include\itemcollector.h \
     include\bezierline.h \
     include\addwidget.h \
-    include\constantwidget.h
+    include\constantwidget.h \
+    include\itemdrawmaster.h \
+    include\radialwidget.h
 
 FORMS    += ui\mainwindow.ui \
     ui\perlinwidget.ui \
     ui\addwidget.ui \
-    ui\constantwidget.ui
+    ui\constantwidget.ui \
+    ui\radialwidget.ui
 
 RESOURCES += \
     resource.qrc

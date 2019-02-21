@@ -70,40 +70,6 @@
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>persistence:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QSlider" name="persistance_SL">
-       <property name="maximum">
-        <number>10</number>
-       </property>
-       <property name="singleStep">
-        <number>0</number>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="tickPosition">
-        <enum>QSlider::TicksBelow</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLCDNumber" name="persistance_LCD">
-       <property name="smallDecimalPoint">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
       <widget class="QLabel" name="label_3">
@@ -115,7 +81,10 @@
      <item>
       <widget class="QSlider" name="octaves_SL">
        <property name="maximum">
-        <number>10</number>
+        <number>16</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
        </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -142,7 +111,10 @@
      <item>
       <widget class="QSlider" name="amplitude_SL_">
        <property name="maximum">
-        <number>255</number>
+        <number>100</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
        </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -169,7 +141,10 @@
      <item>
       <widget class="QSlider" name="frequency_SL">
        <property name="maximum">
-        <number>10</number>
+        <number>16</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
        </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -197,6 +172,9 @@
       <widget class="QSlider" name="randomseed_SL">
        <property name="maximum">
         <number>10</number>
+       </property>
+       <property name="pageStep">
+        <number>1</number>
        </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -310,22 +288,6 @@
     <hint type="destinationlabel">
      <x>245</x>
      <y>203</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>persistance_SL</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>persistance_LCD</receiver>
-   <slot>display(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>199</x>
-     <y>60</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>234</x>
-     <y>60</y>
     </hint>
    </hints>
   </connection>

@@ -12,7 +12,7 @@ MainView::MainView(QWidget *parent):QGraphicsView(parent)
 
     scene->setBackgroundBrush(QBrush(QColor(100,100,100)));
 
-    scene->setSceneRect(0,0,2000,2000);
+    scene->setSceneRect(0,0,1500,1000);
 
     this->setScene(scene);
 }
