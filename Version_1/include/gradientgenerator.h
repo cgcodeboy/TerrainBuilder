@@ -16,6 +16,11 @@ public:
 
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
+private:
+    virtual void heightDataProcess();
+
+    CImg<unsigned char> m_heightData;
+
 protected:
     virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event);
     virtual void focusInEvent(QFocusEvent *event);

@@ -37,6 +37,11 @@ void GradientGenerator::paint(QPainter *painter, const QStyleOptionGraphicsItem 
     }
 }
 
+void GradientGenerator::heightDataProcess()
+{
+
+}
+
 void GradientGenerator::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsItem::mouseDoubleClickEvent(event);
