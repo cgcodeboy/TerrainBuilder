@@ -20,7 +20,7 @@ private slots:
     void on_confirm_BT_clicked();
 
 signals:
-    void infoConfirm(float,float,float,int,int);
+    void infoConfirm(float,float,int,int);
 
 private:
     Ui::PerlinWidget *ui;

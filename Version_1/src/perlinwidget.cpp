@@ -16,5 +16,5 @@ PerlinWidget::~PerlinWidget()
 
 void PerlinWidget::on_confirm_BT_clicked()
 {
-    emit infoConfirm(ui->persistance_LCD->value(),ui->frequency_LCD->value(),ui->amplitude_LCD->value(),ui->octaves_LCD->value(),ui->randomseed_LCD->value());
+    emit infoConfirm(ui->frequency_LCD->value(),ui->amplitude_LCD->value()/100,ui->octaves_LCD->value(),ui->randomseed_LCD->value());
 }

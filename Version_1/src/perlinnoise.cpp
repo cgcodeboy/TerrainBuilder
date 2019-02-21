@@ -41,6 +41,7 @@ void PerlinNoise::setAmplitude(float amplitude)
 
 float PerlinNoise::getNoiseValue(float x, float y)
 {
+    qDebug()<<total(x,y);
     return _amplitude * total(x, y);
 }
 

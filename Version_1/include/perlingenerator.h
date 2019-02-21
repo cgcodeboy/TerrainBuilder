@@ -7,7 +7,8 @@ Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
 
 #include <include/generator.h>
 #include <include/perlinwidget.h>
-#include <include/perlinnoise.h>
+#include <include/perlin.h>
+#include <include/itemdrawmaster.h>
 
 class PerlinGenerator: public Generator
 {
@@ -24,13 +25,13 @@ private:
 
     CImg<unsigned char> m_heightData;
     PerlinWidget* _perlin;
-    PerlinNoise* noise;
+    Perlin* noise;
 
     static int counterNum;
     int _number;
 
 private slots:
-    void infoCome(float persistence,float frequency,float amplitude,int octaves,int randomseed);
+    void infoCome(float frequency, float amplitude, int octaves, int randomseed);
 
 protected:
     virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event);

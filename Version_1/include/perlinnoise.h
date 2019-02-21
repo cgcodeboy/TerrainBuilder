@@ -2,6 +2,7 @@
 #define PERLINNOISE_H
 
 #include <math.h>
+#include <QDebug>
 
 /**
  * @brief The PerlinNoise class
