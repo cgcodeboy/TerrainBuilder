@@ -106,8 +106,8 @@ void RadialGenerator::infoCome(int radius, int radial_type)
 
 void RadialGenerator::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
-    QGraphicsItem::mouseDoubleClickEvent(event);
     _radial->show();
+    QGraphicsItem::mouseDoubleClickEvent(event);
 }
 
 void RadialGenerator::focusInEvent(QFocusEvent *event)

@@ -53,7 +53,8 @@ SOURCES += src\main.cpp\
     src\addwidget.cpp \
     src\constantwidget.cpp \
     src\itemdrawmaster.cpp \
-    src\radialwidget.cpp
+    src\radialwidget.cpp \
+    src\voronoiwidget.cpp
 
 HEADERS  += include\mainwindow.h \
     include\mainview.h \
@@ -95,13 +96,15 @@ HEADERS  += include\mainwindow.h \
     include\addwidget.h \
     include\constantwidget.h \
     include\itemdrawmaster.h \
-    include\radialwidget.h
+    include\radialwidget.h \
+    include\voronoiwidget.h
 
 FORMS    += ui\mainwindow.ui \
     ui\perlinwidget.ui \
     ui\addwidget.ui \
     ui\constantwidget.ui \
-    ui\radialwidget.ui
+    ui\radialwidget.ui \
+    ui\voronoiwidget.ui
 
 RESOURCES += \
     resource.qrc

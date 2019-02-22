@@ -50,8 +50,8 @@ void PerlinGenerator::infoCome(float frequency, float amplitude, int octaves, in
 
 void PerlinGenerator::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
-    QGraphicsItem::mouseDoubleClickEvent(event);
     _perlin->show();
+    QGraphicsItem::mouseDoubleClickEvent(event);    
 }
 
 void PerlinGenerator::focusInEvent(QFocusEvent *event)
