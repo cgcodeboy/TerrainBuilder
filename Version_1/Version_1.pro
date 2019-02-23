@@ -46,7 +46,6 @@ SOURCES += src\main.cpp\
     src\nature.cpp \
     src\water.cpp \
     src\thermal.cpp \
-    src\perlinnoise.cpp \
     src\perlin.cpp \
     src\itemcollector.cpp \
     src\bezierline.cpp \
@@ -54,7 +53,9 @@ SOURCES += src\main.cpp\
     src\constantwidget.cpp \
     src\itemdrawmaster.cpp \
     src\radialwidget.cpp \
-    src\voronoiwidget.cpp
+    src\voronoiwidget.cpp \
+    src\layoutwidget.cpp \
+    src\paintwidget.cpp
 
 HEADERS  += include\mainwindow.h \
     include\mainview.h \
@@ -89,7 +90,6 @@ HEADERS  += include\mainwindow.h \
     include\nature.h \
     include\water.h \
     include\thermal.h \
-    include\perlinnoise.h \
     include\perlin.h \
     include\itemcollector.h \
     include\bezierline.h \
@@ -97,14 +97,18 @@ HEADERS  += include\mainwindow.h \
     include\constantwidget.h \
     include\itemdrawmaster.h \
     include\radialwidget.h \
-    include\voronoiwidget.h
+    include\voronoiwidget.h \
+    include\layoutwidget.h \
+    include\paintwidget.h \
+    include\shape.h
 
 FORMS    += ui\mainwindow.ui \
     ui\perlinwidget.ui \
     ui\addwidget.ui \
     ui\constantwidget.ui \
     ui\radialwidget.ui \
-    ui\voronoiwidget.ui
+    ui\voronoiwidget.ui \
+    ui\layoutwidget.ui
 
 RESOURCES += \
     resource.qrc

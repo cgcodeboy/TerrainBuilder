@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Radial Generator</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -180,15 +180,8 @@
     </spacer>
    </item>
   </layout>
-  <zorder>layoutWidget</zorder>
   <zorder>line</zorder>
   <zorder>verticalSpacer</zorder>
-  <zorder>layoutWidget_3</zorder>
-  <zorder>radius_SL</zorder>
-  <zorder>radius_LCD</zorder>
-  <zorder>layoutWidget_2</zorder>
-  <zorder>type_CB</zorder>
-  <zorder>label_4</zorder>
  </widget>
  <resources/>
  <connections>

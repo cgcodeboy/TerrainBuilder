@@ -5,6 +5,8 @@ LayoutGenerator::LayoutGenerator():Generator(ITEM_TYPE::Layout_Generator)
     focused = false;
     setFlag(ItemIsSelectable,true);
     setFlag(ItemIsFocusable,true);
+
+    _layout = new LayoutWidget;
 }
 
 QRectF LayoutGenerator::boundingRect() const
@@ -39,6 +41,7 @@ void LayoutGenerator::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
 
 void LayoutGenerator::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
+    _layout->show();
     QGraphicsItem::mouseDoubleClickEvent(event);
 }
 
