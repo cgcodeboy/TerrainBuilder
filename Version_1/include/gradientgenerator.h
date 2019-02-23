@@ -6,9 +6,11 @@ Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
 #define GRADIENT_GRNERATOR_H
 
 #include <include/generator.h>
+#include <include/gradientwidget.h>
 
 class GradientGenerator : public Generator
 {
+    Q_OBJECT
 public:
     GradientGenerator();
 
@@ -20,6 +22,12 @@ private:
     virtual void heightDataProcess();
 
     CImg<unsigned char> m_heightData;
+    GradientWidget *_gradient;
+    int _width;
+    int _direction;
+
+private slots:
+    void infoCome(int direction, int width);
 
 protected:
     virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event);
