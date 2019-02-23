@@ -55,7 +55,8 @@ SOURCES += src\main.cpp\
     src\radialwidget.cpp \
     src\voronoiwidget.cpp \
     src\layoutwidget.cpp \
-    src\paintwidget.cpp
+    src\paintwidget.cpp \
+    src\gradientwidget.cpp
 
 HEADERS  += include\mainwindow.h \
     include\mainview.h \
@@ -100,7 +101,8 @@ HEADERS  += include\mainwindow.h \
     include\voronoiwidget.h \
     include\layoutwidget.h \
     include\paintwidget.h \
-    include\shape.h
+    include\shape.h \
+    include\gradientwidget.h
 
 FORMS    += ui\mainwindow.ui \
     ui\perlinwidget.ui \
@@ -108,7 +110,8 @@ FORMS    += ui\mainwindow.ui \
     ui\constantwidget.ui \
     ui\radialwidget.ui \
     ui\voronoiwidget.ui \
-    ui\layoutwidget.ui
+    ui\layoutwidget.ui \
+    ui\gradientwidget.ui
 
 RESOURCES += \
     resource.qrc

@@ -15,6 +15,12 @@ public:
     explicit GradientWidget(QWidget *parent = 0);
     ~GradientWidget();
 
+signals:
+    void infoConfirm(int,int);
+
+private slots:
+    void on_confirm_BT_clicked();
+
 private:
     Ui::GradientWidget *ui;
 };
