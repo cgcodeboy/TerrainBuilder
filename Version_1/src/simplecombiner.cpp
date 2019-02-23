@@ -35,6 +35,13 @@ void SimpleCombiner::paint(QPainter *painter, const QStyleOptionGraphicsItem *op
     }
 }
 
+void SimpleCombiner::heightDataProcess()
+{
+    for(int i = 0;i<255;i++)
+        for(int j = 0;j<255;j++)
+            outputHeightData(i,j,0,0) = (inputHeightData_1(i,j,0,0) + inputHeightData_1(i,j,0,0))/2;
+}
+
 void SimpleCombiner::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsItem::mouseDoubleClickEvent(event);
