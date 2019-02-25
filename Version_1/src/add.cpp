@@ -23,6 +23,7 @@ void Add::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidg
 
 void Add::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
+    _add->show();
     QGraphicsItem::mouseDoubleClickEvent(event);
 }
 

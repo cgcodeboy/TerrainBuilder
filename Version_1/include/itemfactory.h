@@ -19,6 +19,7 @@ Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
 #include <include/multiply.h>
 #include <include/divide.h>
 #include <include/invert.h>
+#include <include/sqrt.h>
 #include <include/blur.h>
 #include <include/clamp.h>
 #include <include/noise.h>

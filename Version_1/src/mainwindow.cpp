@@ -27,9 +27,9 @@ void MainWindow::on_select_BT_clicked()
     foreach (QGraphicsItem* item, scene->items(Qt::AscendingOrder)) {
         item->setFlag(QGraphicsItem::ItemIsMovable,true);
     }
-//    QApplication::restoreOverrideCursor();
-//    setCursor(Qt::ArrowCursor);
-//    ui->mainView->setCur_type(ITEM_TYPE::Arrow);
+    QApplication::restoreOverrideCursor();
+    setCursor(Qt::ArrowCursor);
+    ui->mainView->setCur_type(ITEM_TYPE::Arrow);
 }
 
 void MainWindow::on_connect_BT_clicked()
@@ -38,9 +38,9 @@ void MainWindow::on_connect_BT_clicked()
     foreach (QGraphicsItem* item, scene->items(Qt::AscendingOrder)) {
         item->setFlag(QGraphicsItem::ItemIsMovable,false);
     }
-//    QApplication::restoreOverrideCursor();
-//    setCursor(Qt::CrossCursor);
-//    ui->mainView->setCur_type(ITEM_TYPE::Connect);
+    QApplication::restoreOverrideCursor();
+    setCursor(Qt::CrossCursor);
+    ui->mainView->setCur_type(ITEM_TYPE::Connect);
 }
 
 void MainWindow::on_constant_Gen_BT_clicked()

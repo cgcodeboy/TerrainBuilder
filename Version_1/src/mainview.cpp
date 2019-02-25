@@ -164,6 +164,10 @@ void MainView::mousePressEvent(QMouseEvent *event)
         addItem(ITEM_TYPE::Invert_Math,point.x(),point.y());
         break;
     }
+    case ITEM_TYPE::Sqrt_Math:{
+        addItem(ITEM_TYPE::Sqrt_Math,point.x(),point.y());
+        break;
+    }
     case ITEM_TYPE::Blur_Filter:{
         addItem(ITEM_TYPE::Blur_Filter,point.x(),point.y());
         break;

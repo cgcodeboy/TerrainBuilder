@@ -282,6 +282,23 @@
     </Item>
 
     <Item>
+        <Item_type>Sqrt_Math</Item_type>
+        <ResourcePath>:/image/resource/image/item/sqrt.jpg</ResourcePath>
+        <InputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </InputParameters>
+        <OutputParameters>
+            <Parameter>
+                <Name>HeightValue</Name>
+                <Type>Integer</Type>
+            </Parameter>
+        </OutputParameters>
+    </Item>
+
+    <Item>
         <Item_type>WaterErosion_Nature</Item_type>
         <ResourcePath>:/image/resource/image/item/water.jpg</ResourcePath>
         <InputParameters>

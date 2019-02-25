@@ -43,6 +43,7 @@ SOURCES += src\main.cpp\
     src\multiply.cpp \
     src\divide.cpp \
     src\invert.cpp \
+    src\sqrt.cpp\
     src\nature.cpp \
     src\water.cpp \
     src\thermal.cpp \
@@ -88,6 +89,7 @@ HEADERS  += include\mainwindow.h \
     include\multiply.h \
     include\divide.h \
     include\invert.h \
+    include\sqrt.h\
     include\nature.h \
     include\water.h \
     include\thermal.h \

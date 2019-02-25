@@ -61,6 +61,10 @@ Item *ItemFactory::buildItem(ITEM_TYPE type)
         item = new Invert();
         break;
     }
+    case ITEM_TYPE::Sqrt_Math:{
+        item = new Sqrt();
+        break;
+    }
     case ITEM_TYPE::Blur_Filter:{
         item = new Blur();
         break;
