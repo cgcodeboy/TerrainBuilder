@@ -3,6 +3,7 @@
 
 #include <include/generator.h>
 #include <include/voronoiwidget.h>
+#include <include/itemdrawmaster.h>
 
 #include <vector>
 

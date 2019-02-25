@@ -2,6 +2,7 @@
 #define MULTIPLY_H
 
 #include <include/math.h>
+#include <include/itemdrawmaster.h>
 
 class Multiply : public Math
 {

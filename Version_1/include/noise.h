@@ -2,6 +2,7 @@
 #define NOISE_H
 
 #include <include/filter.h>
+#include <include/itemdrawmaster.h>
 
 
 class Noise : public Filter

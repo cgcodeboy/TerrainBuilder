@@ -2,6 +2,7 @@
 #define INVERT_H
 
 #include <include/math.h>
+#include <include/itemdrawmaster.h>
 
 class Invert : public Math
 {

@@ -41,9 +41,10 @@ enum ITEM_TYPE{
     Multiply_Math,
     Divide_Math,
     Invert_Math,
+    Sqrt_Math,
     WaterErosion_Nature,
-    ThemalErosion_Nature,
-    HeightField_Output,
+    ThermalErosion_Nature,
+    Height_Output,
     Texture_Output
 };
 
@@ -66,9 +67,10 @@ const QString TYPE_NAMES[] = {    "Arrow",
                                 "Multiply_Math",
                                 "Divide_Math",
                                 "Invert_Math",
+                                "Sqrt_Math",
                                 "WaterErosion_Nature",
-                                "ThemalErosion_Nature",
-                                "HeightField_Output",
+                                "ThermalErosion_Nature",
+                                "Height_Output",
                                 "Texture_Output"
                            };
 

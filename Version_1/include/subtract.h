@@ -2,6 +2,7 @@
 #define SUBTRACT_H
 
 #include <include/math.h>
+#include <include/itemdrawmaster.h>
 
 class Subtract : public Math
 {

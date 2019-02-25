@@ -2,6 +2,7 @@
 #define BLUR_H
 
 #include <include/filter.h>
+#include <include/itemdrawmaster.h>
 
 class Blur : public Filter
 {

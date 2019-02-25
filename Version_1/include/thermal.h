@@ -2,6 +2,7 @@
 #define THERMAL_EROSION_H
 
 #include <include/nature.h>
+#include <include/itemdrawmaster.h>
 
 class ThermalErosion : public Nature
 {

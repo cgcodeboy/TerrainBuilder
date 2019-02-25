@@ -3,6 +3,7 @@
 
 #include <include/generator.h>
 #include <include/radialwidget.h>
+#include <include/itemdrawmaster.h>
 
 class RadialGenerator : public Generator
 {

@@ -9,7 +9,6 @@
         <file>resource/image/item/add.jpg</file>
         <file>resource/image/item/blur.jpg</file>
         <file>resource/image/item/clamp.jpg</file>
-        <file>resource/image/item/complex.jpg</file>
         <file>resource/image/item/constant.jpg</file>
         <file>resource/image/item/divide.jpg</file>
         <file>resource/image/item/height.jpg</file>
@@ -18,13 +17,14 @@
         <file>resource/image/item/noise.jpg</file>
         <file>resource/image/item/perlin.jpg</file>
         <file>resource/image/item/radial.jpg</file>
-        <file>resource/image/item/simle.jpg</file>
         <file>resource/image/item/subtract.jpg</file>
         <file>resource/image/item/terrace.jpg</file>
         <file>resource/image/item/texture.jpg</file>
         <file>resource/image/item/thermal.jpg</file>
         <file>resource/image/item/voronoi.jpg</file>
         <file>resource/image/item/water.jpg</file>
+        <file>resource/image/item/constraint.jpg</file>
+        <file>resource/image/item/simple.jpg</file>
     </qresource>
     <qresource prefix="/icon">
         <file>resource/image/simple.ico</file>

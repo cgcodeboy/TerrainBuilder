@@ -31,7 +31,10 @@ void ItemDrawMaster::draw()
             QDomNode node = e.firstChild();
             if(!node.isNull()){
                 if(node.toElement().text()== getElemTypeName(_type)){
-                    QDomNode input = node.nextSibling();
+                    QDomNode res = node.nextSibling();
+                    QString resStr = res.toElement().text();
+
+                    QDomNode input = res.nextSibling();
                     QDomNodeList inputList = input.childNodes();
                     QDomNode output = input.nextSibling();
                     QDomNodeList outputList = output.childNodes();
@@ -45,7 +48,7 @@ void ItemDrawMaster::draw()
                     }
 
                     QRectF rec_1(0,0,150,50);
-                    QImage image(":/image/resource/image/item/perlin.jpg");
+                    QImage image(resStr);
                     _painter->drawImage(rec_1,image);
                     QRectF rec;
                     if(inputList.size()>=outputList.size()){

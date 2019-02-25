@@ -2,6 +2,7 @@
 #define CLAMP_H
 
 #include <include/filter.h>
+#include <include/itemdrawmaster.h>
 
 class Clamp : public Filter
 {

@@ -3,6 +3,7 @@
 
 #include <include/math.h>
 #include <include/addwidget.h>
+#include <include/itemdrawmaster.h>
 
 class Add : public Math
 {

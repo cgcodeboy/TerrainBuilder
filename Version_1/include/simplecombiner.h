@@ -6,6 +6,7 @@ Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
 #define SIMPLECOMBINER_H
 
 #include <include/combiner.h>
+#include <include/itemdrawmaster.h>
 
 class SimpleCombiner : public Combiner
 {

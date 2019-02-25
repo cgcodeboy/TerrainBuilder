@@ -45,7 +45,9 @@ void MainView::mousePressEvent(QMouseEvent *event)
         setCur_type(ITEM_TYPE::Arrow);
         return;
     }
+    //当前是连接状态
     if(cur_type == ITEM_TYPE::Connect){
+        //如果不存在起始元素，则当前点击的元素作为起始元素
         if(!startItem){
             QPoint point = event->pos();
 //            qDebug()<<"start"<<point.x()<<point.y();
@@ -55,12 +57,14 @@ void MainView::mousePressEvent(QMouseEvent *event)
             return;
         }
 //        qDebug()<<"hello";
+        //如果不存在结束元素，则当前点击的元素作为结束元素
         if(!endItem){
             QPoint point = event->pos();
 //            qDebug()<<"end"<<point.x()<<point.y();
             //wait to correct!!
             endItem = dynamic_cast<Item*>(scene->itemAt(QPoint(point.x(),point.y()),QTransform()));
             if(endItem){
+                //如果起始元素与结束元素不同，则连接两个元素
                 if(startItem!=endItem){
                     //                    if(startItem->pos().x()<endItem->pos().x()){
                     //                        if(startItem->pos().y()<endItem->pos().y()){
@@ -94,6 +98,7 @@ void MainView::mousePressEvent(QMouseEvent *event)
                     startItem = nullptr;
                     endItem = nullptr;
                 }
+                //如果起始元素与终点元素不同，则此次结束元素选择无效
                 else{
                     endItem = nullptr;
                 }
@@ -103,6 +108,7 @@ void MainView::mousePressEvent(QMouseEvent *event)
         }
     }
 
+    //如果当前状态是创建状态，则根据相应选择的元素新建元素
     QPoint point = event->pos();
     switch (cur_type) {
     case ITEM_TYPE::Constant_Generator:{
@@ -128,6 +134,66 @@ void MainView::mousePressEvent(QMouseEvent *event)
     }
     case ITEM_TYPE::Voronoi_Generator:{
         addItem(ITEM_TYPE::Voronoi_Generator,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::Simple_Combiner:{
+        addItem(ITEM_TYPE::Simple_Combiner,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::Constraint_Combiner:{
+        addItem(ITEM_TYPE::Constraint_Combiner,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::Add_Math:{
+        addItem(ITEM_TYPE::Add_Math,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::Subtract_Math:{
+        addItem(ITEM_TYPE::Subtract_Math,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::Multiply_Math:{
+        addItem(ITEM_TYPE::Multiply_Math,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::Divide_Math:{
+        addItem(ITEM_TYPE::Divide_Math,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::Invert_Math:{
+        addItem(ITEM_TYPE::Invert_Math,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::Blur_Filter:{
+        addItem(ITEM_TYPE::Blur_Filter,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::Noise_Filter:{
+        addItem(ITEM_TYPE::Noise_Filter,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::Clamp_Filter:{
+        addItem(ITEM_TYPE::Clamp_Filter,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::Terrace_Filter:{
+        addItem(ITEM_TYPE::Terrace_Filter,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::WaterErosion_Nature:{
+        addItem(ITEM_TYPE::WaterErosion_Nature,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::ThermalErosion_Nature:{
+        addItem(ITEM_TYPE::ThermalErosion_Nature,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::Height_Output:{
+        addItem(ITEM_TYPE::Height_Output,point.x(),point.y());
+        break;
+    }
+    case ITEM_TYPE::Texture_Output:{
+        addItem(ITEM_TYPE::Texture_Output,point.x(),point.y());
         break;
     }
     default:
@@ -158,6 +224,7 @@ void MainView::initBluePrint()
 
 void MainView::addItem(ITEM_TYPE type,int x,int y)
 {
+    qDebug()<<"add";
     Item *item = itembuilder->buildItem(type,x,y);
     scene->addItem(item);
 }

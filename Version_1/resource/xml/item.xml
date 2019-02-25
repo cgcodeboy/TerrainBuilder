@@ -2,6 +2,7 @@
 <Items>
     <Item>
         <Item_type>Constant_Generator</Item_type>
+        <ResourcePath>:/image/resource/image/item/constant.jpg</ResourcePath>
         <InputParameters>        
         </InputParameters>
         <OutputParameters>
@@ -14,6 +15,7 @@
 
     <Item>
         <Item_type>Gradient_Generator</Item_type>
+        <ResourcePath>:/image/resource/image/item/gradient.jpg</ResourcePath>
         <InputParameters>
         </InputParameters>
         <OutputParameters>
@@ -26,6 +28,7 @@
 
     <Item>
         <Item_type>Layout_Generator</Item_type>
+        <ResourcePath>:/image/resource/image/item/layout.jpg</ResourcePath>
         <InputParameters>
         </InputParameters>
         <OutputParameters>
@@ -38,11 +41,8 @@
 
     <Item>
         <Item_type>Perlin_Generator</Item_type>
-        <InputParameters>
-            <Parameter>
-                <Name>HelloValue</Name>
-                <Type>Integer</Type>
-            </Parameter>
+        <ResourcePath>:/image/resource/image/item/perlin.jpg</ResourcePath>
+        <InputParameters>           
         </InputParameters>
         <OutputParameters>
             <Parameter>
@@ -54,6 +54,7 @@
 
     <Item>
         <Item_type>Radial_Generator</Item_type>
+        <ResourcePath>:/image/resource/image/item/radial.jpg</ResourcePath>
         <InputParameters>
         </InputParameters>
         <OutputParameters>
@@ -66,6 +67,7 @@
 
     <Item>
         <Item_type>Voronoi_Generator</Item_type>
+        <ResourcePath>:/image/resource/image/item/voronoi.jpg</ResourcePath>
         <InputParameters>
         </InputParameters>
         <OutputParameters>
@@ -78,6 +80,7 @@
 
     <Item>
         <Item_type>Simple_Combiner</Item_type>
+        <ResourcePath>:/image/resource/image/item/simple.jpg</ResourcePath>
         <InputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
@@ -98,6 +101,7 @@
 
     <Item>
         <Item_type>Constraint_Combiner</Item_type>
+        <ResourcePath>:/image/resource/image/item/constraint.jpg</ResourcePath>
         <InputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
@@ -118,6 +122,7 @@
 
     <Item>
         <Item_type>Blur_Filter</Item_type>
+        <ResourcePath>:/image/resource/image/item/blur.jpg</ResourcePath>
         <InputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
@@ -134,6 +139,7 @@
 
     <Item>
         <Item_type>Clamp_Filter</Item_type>
+        <ResourcePath>:/image/resource/image/item/clamp.jpg</ResourcePath>
         <InputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
@@ -150,6 +156,7 @@
 
     <Item>
         <Item_type>Noise_Filter</Item_type>
+        <ResourcePath>:/image/resource/image/item/noise.jpg</ResourcePath>
         <InputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
@@ -166,6 +173,7 @@
 
     <Item>
         <Item_type>Terrace_Filter</Item_type>
+        <ResourcePath>:/image/resource/image/item/terrace.jpg</ResourcePath>
         <InputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
@@ -182,6 +190,7 @@
 
     <Item>
         <Item_type>Add_Math</Item_type>
+        <ResourcePath>:/image/resource/image/item/add.jpg</ResourcePath>
         <InputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
@@ -202,6 +211,7 @@
 
     <Item>
         <Item_type>Subtract_Math</Item_type>
+        <ResourcePath>:/image/resource/image/item/subtract.jpg</ResourcePath>
         <InputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
@@ -222,6 +232,7 @@
 
     <Item>
         <Item_type>Multiply_Math</Item_type>
+        <ResourcePath>:/image/resource/image/item/multiply.jpg</ResourcePath>
         <InputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
@@ -238,6 +249,7 @@
 
     <Item>
         <Item_type>Divide_Math</Item_type>
+        <ResourcePath>:/image/resource/image/item/divide.jpg</ResourcePath>
         <InputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
@@ -254,6 +266,7 @@
 
     <Item>
         <Item_type>Invert_Math</Item_type>
+        <ResourcePath>:/image/resource/image/item/invert.jpg</ResourcePath>
         <InputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
@@ -270,6 +283,7 @@
 
     <Item>
         <Item_type>WaterErosion_Nature</Item_type>
+        <ResourcePath>:/image/resource/image/item/water.jpg</ResourcePath>
         <InputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
@@ -285,7 +299,8 @@
     </Item>
 
     <Item>
-        <Item_type>ThemalErosion_Nature</Item_type>
+        <Item_type>ThermalErosion_Nature</Item_type>
+        <ResourcePath>:/image/resource/image/item/thermal.jpg</ResourcePath>
         <InputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
@@ -301,7 +316,8 @@
     </Item>
 
     <Item>
-        <Item_type>HeightField_Output</Item_type>
+        <Item_type>Height_Output</Item_type>
+        <ResourcePath>:/image/resource/image/item/height.jpg</ResourcePath>
         <InputParameters>
             <Parameter>
                 <Name>HeightValue</Name>
@@ -318,6 +334,7 @@
 
     <Item>
         <Item_type>Texture_Output</Item_type>
+        <ResourcePath>:/image/resource/image/item/texture.jpg</ResourcePath>
         <InputParameters>
             <Parameter>
                 <Name>HeightValue</Name>

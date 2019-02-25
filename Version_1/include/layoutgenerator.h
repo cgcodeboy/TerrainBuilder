@@ -8,6 +8,7 @@ Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
 
 #include <include/generator.h>
 #include <include/layoutwidget.h>
+#include <include/itemdrawmaster.h>
 
 class LayoutGenerator : public Generator
 {

@@ -40,7 +40,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Perlin Generator</string>
+        <string>Constant Generator</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>

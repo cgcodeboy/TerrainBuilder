@@ -7,6 +7,7 @@ Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
 
 #include <include/generator.h>
 #include <include/gradientwidget.h>
+#include <include/itemdrawmaster.h>
 
 class GradientGenerator : public Generator
 {

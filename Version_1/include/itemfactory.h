@@ -13,8 +13,20 @@ Distributed under the LGPL License(http://www.gnu.org/licenses/lgpl.html)
 #include <include/radialgenerator.h>
 #include <include/voronoigenerator.h>
 #include <include/simplecombiner.h>
-#include <include/constraintcombiner.h>s
-#include <include/item.h>
+#include <include/constraintcombiner.h>
+#include <include/add.h>
+#include <include/subtract.h>
+#include <include/multiply.h>
+#include <include/divide.h>
+#include <include/invert.h>
+#include <include/blur.h>
+#include <include/clamp.h>
+#include <include/noise.h>
+#include <include/terrace.h>
+#include <include/water.h>
+#include <include/thermal.h>
+#include <include/heightoutput.h>
+#include <include/textureoutput.h>
 
 class ItemFactory
 {

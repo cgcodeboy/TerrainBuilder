@@ -2,6 +2,7 @@
 #define DIVIDE_H
 
 #include <include/math.h>
+#include <include/itemdrawmaster.h>
 
 class Divide : public Math
 {

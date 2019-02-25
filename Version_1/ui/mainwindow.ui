@@ -36,7 +36,7 @@
          </size>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="macro_tab">
          <attribute name="title">
@@ -67,14 +67,14 @@
           <item>
            <widget class="QToolBox" name="toolBox">
             <property name="currentIndex">
-             <number>4</number>
+             <number>5</number>
             </property>
             <widget class="QWidget" name="page">
              <property name="geometry">
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>98</width>
+               <width>109</width>
                <height>89</height>
               </rect>
              </property>
@@ -255,7 +255,7 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>98</width>
+               <width>109</width>
                <height>89</height>
               </rect>
              </property>
@@ -303,7 +303,7 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="complex_Con_BT">
+                     <widget class="QPushButton" name="constraint_Con_BT">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                         <horstretch>0</horstretch>
@@ -337,7 +337,7 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>98</width>
+               <width>109</width>
                <height>89</height>
               </rect>
              </property>
@@ -467,7 +467,7 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>98</width>
+               <width>109</width>
                <height>89</height>
               </rect>
              </property>
@@ -611,7 +611,7 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="root_Math_BT">
+                     <widget class="QPushButton" name="sqrt_Math_BT">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                         <horstretch>0</horstretch>
@@ -645,8 +645,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>126</width>
-               <height>90</height>
+               <width>109</width>
+               <height>89</height>
               </rect>
              </property>
              <attribute name="label">
@@ -664,7 +664,7 @@
                    <x>0</x>
                    <y>0</y>
                    <width>106</width>
-                   <height>70</height>
+                   <height>69</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -727,13 +727,86 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>98</width>
-               <height>28</height>
+               <width>126</width>
+               <height>70</height>
               </rect>
              </property>
              <attribute name="label">
               <string>Output</string>
              </attribute>
+             <widget class="QScrollArea" name="scrollArea_6">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>0</y>
+                <width>108</width>
+                <height>72</height>
+               </rect>
+              </property>
+              <property name="widgetResizable">
+               <bool>true</bool>
+              </property>
+              <widget class="QWidget" name="scrollAreaWidgetContents_6">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>106</width>
+                 <height>70</height>
+                </rect>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_13">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_13">
+                  <item>
+                   <widget class="QPushButton" name="height_Out_BT">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>40</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">border-image: url(:/icon/resource/image/tool/water.ico);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="texture_Out_BT">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>40</width>
+                      <height>40</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">border-image: url(:/icon/resource/image/tool/thermal.ico);</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </widget>
             </widget>
            </widget>
           </item>

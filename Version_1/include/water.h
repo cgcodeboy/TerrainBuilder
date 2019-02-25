@@ -2,6 +2,7 @@
 #define WATER_EROSION_H
 
 #include <include/nature.h>
+#include <include/itemdrawmaster.h>
 
 class WaterErosion : public Nature
 {

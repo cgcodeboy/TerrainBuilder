@@ -2,6 +2,7 @@
 #define TERRACE_H
 
 #include <include/filter.h>
+#include <include/itemdrawmaster.h>
 
 class Terrace : public Filter
 {

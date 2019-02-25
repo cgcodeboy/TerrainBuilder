@@ -2,38 +2,23 @@
 
 Add::Add():Math(ITEM_TYPE::Add_Math)
 {
+    focused = false;
+    setFlag(ItemIsSelectable,true);
+    setFlag(ItemIsFocusable,true);
+
     _add = new AddWidget;
     connect(_add,SIGNAL(infoConfirm(int)),this,SLOT(infoCome(int)));
 }
 
 QRectF Add::boundingRect() const
 {
-    return QRectF(0,0,100,200);
+    return QRectF(0,0,150,90);
 }
 
 void Add::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    if(focused){
-        painter->setPen(Qt::green);
-        painter->drawRect(0,0,100,200);
-        QBrush brush(QColor(255,0,0,100));
-        painter->fillRect(QRect(0,0,100,200),brush);
-    }
-    else
-    {
-        QRectF rec1(0,0,100,50);
-        QImage image(":/image/resource/image/item/add.jpg");
-        painter->drawImage(rec1,image);
-
-        QRectF rec2(0,50,100,150);
-        QBrush brush(QColor(30,40,50,50));
-        painter->fillRect(rec2,brush);
-
-        painter->setPen(Qt::green);
-        painter->drawEllipse(2,68,5,5);
-
-        painter->drawText(10,70,"hello");
-    }
+    ItemDrawMaster *drawMaster = new ItemDrawMaster(getType(),painter,focused);
+    drawMaster->draw();
 }
 
 void Add::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)

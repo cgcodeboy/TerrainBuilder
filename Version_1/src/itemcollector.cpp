@@ -56,11 +56,11 @@ void ItemCollector::addItem(Item *item)
         break;
     }
     case ITEM_TYPE::WaterErosion_Nature:
-    case ITEM_TYPE::ThemalErosion_Nature:{
+    case ITEM_TYPE::ThermalErosion_Nature:{
         _natureList->push_back(dynamic_cast<Nature*>(item));
         break;
     }
-    case ITEM_TYPE::HeightField_Output:
+    case ITEM_TYPE::Height_Output:
     case ITEM_TYPE::Texture_Output:{
         _outputList->push_back(dynamic_cast<Output*>(item));
         break;
