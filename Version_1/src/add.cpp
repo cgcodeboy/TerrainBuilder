@@ -43,13 +43,13 @@ void Add::focusOutEvent(QFocusEvent *event)
 
 void Add::processHeightData()
 {
-    BezierLine *input = m_inLineList.at(0);
-    CImg<unsigned char> data = input->getData();
+    //BezierLine *input = m_inLineList.at(0);
+    //CImg<unsigned char> data = input->getData();
     if(!data.is_empty()){
         m_heightData.assign(512,512,1,1);
         for (int i = 0; i < 512; i++){
             for (int j = 0; j < 512; j++){
-                m_heightData(i, j, 0, 0) = data.atXYZC(i,j,0,0)+_value;
+                m_heightData(i, j, 0, 0) += _addValue;
             }
         }
     }
@@ -58,6 +58,7 @@ void Add::processHeightData()
 
 void Add::infoCome(int value)
 {
-    this->_value = value;
+    this->_addValue = value;
+    heightDataProcess();
 }
 

@@ -5,6 +5,9 @@ ConstraintCombiner::ConstraintCombiner():Combiner(ITEM_TYPE::Constraint_Combiner
     focused = false;
     setFlag(ItemIsSelectable,true);
     setFlag(ItemIsFocusable,true);
+
+    _constraint = new ConstraintWidget;
+    connect(_constraint,SIGNAL(infoConfirm(int)),this,SLOT(infoCome(int)));
 }
 
 QRectF ConstraintCombiner::boundingRect() const
@@ -18,8 +21,21 @@ void ConstraintCombiner::paint(QPainter *painter, const QStyleOptionGraphicsItem
     drawMaster->draw();
 }
 
+void ConstraintCombiner::heightDataProcess()
+{
+    for(int i = 0;i<255;i++)
+        for(int j = 0;j<255;j++)
+            outputHeightData(i,j,0,0) = (inputHeightData_1(i,j,0,0)*_coeffcient + inputHeightData_1(i,j,0,0))*(1 - _coeffcient);
+}
+
+void ConstraintCombiner::infoCome(int value)
+{
+    _coeffcient = value;
+}
+
 void ConstraintCombiner::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
+    _constraint->show();
     QGraphicsItem::mouseDoubleClickEvent(event);
 }
 

@@ -2,6 +2,7 @@
 #define SUBTRACT_H
 
 #include <include/math.h>
+#include <include/subtractwidget.h>
 #include <include/itemdrawmaster.h>
 
 class Subtract : public Math
@@ -12,6 +13,16 @@ public:
     QRectF boundingRect() const;
 
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+
+private:
+    SubtractWidget *_subtract;
+    int _subtractValue;
+
+    virtual void processHeightData();
+
+
+private slots:
+    void infoCome(int value);
 
 protected:
     virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event);

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AddWidget</class>
- <widget class="QWidget" name="AddWidget">
+ <class>SubtractWidget</class>
+ <widget class="QWidget" name="SubtractWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>294</width>
-    <height>274</height>
+    <width>400</width>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Add</string>
+   <string>Form</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -40,7 +40,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Add Math Function</string>
+        <string>Subtract Math Function</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -63,23 +63,16 @@
     </layout>
    </item>
    <item>
-    <widget class="Line" name="line">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-   </item>
-   <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Add value:</string>
+        <string>Subtract value:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QSlider" name="addValue_SL">
+      <widget class="QSlider" name="subtractValue_SL">
        <property name="maximum">
         <number>255</number>
        </property>
@@ -92,7 +85,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLCDNumber" name="addValue_LCD"/>
+      <widget class="QLCDNumber" name="subtractValue_LCD"/>
      </item>
     </layout>
    </item>
@@ -134,6 +127,13 @@
     </layout>
    </item>
    <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
     <spacer name="verticalSpacer">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -141,7 +141,7 @@
      <property name="sizeHint" stdset="0">
       <size>
        <width>20</width>
-       <height>181</height>
+       <height>183</height>
       </size>
      </property>
     </spacer>
@@ -151,18 +151,18 @@
  <resources/>
  <connections>
   <connection>
-   <sender>addValue_SL</sender>
+   <sender>subtractValue_SL</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>addValue_LCD</receiver>
+   <receiver>subtractValue_LCD</receiver>
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>93</x>
-     <y>61</y>
+     <x>209</x>
+     <y>53</y>
     </hint>
     <hint type="destinationlabel">
-     <x>257</x>
-     <y>58</y>
+     <x>343</x>
+     <y>50</y>
     </hint>
    </hints>
   </connection>

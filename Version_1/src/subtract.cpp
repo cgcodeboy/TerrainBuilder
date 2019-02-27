@@ -18,6 +18,24 @@ void Subtract::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, 
     drawMaster->draw();
 }
 
+void Subtract::processHeightData()
+{
+    if(!data.is_empty()){
+        m_heightData.assign(512,512,1,1);
+        for (int i = 0; i < 512; i++){
+            for (int j = 0; j < 512; j++){
+                m_heightData(i, j, 0, 0) -= _subtractValue;
+            }
+        }
+    }
+}
+
+void Subtract::infoCome(int value)
+{
+    _subtractValue = value;
+    processHeightData();
+}
+
 void Subtract::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsItem::mouseDoubleClickEvent(event);

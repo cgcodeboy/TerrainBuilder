@@ -19,12 +19,13 @@ protected:
     virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event);
     virtual void focusInEvent(QFocusEvent *event);
     virtual void focusOutEvent(QFocusEvent *event);
-    virtual void processHeightData();
 
 private:
     AddWidget *_add;
-    int _value;
+    int _addValue;
     CImg<unsigned char> m_heightData;
+
+    virtual void processHeightData();
 
 private slots:
     void infoCome(int value);
