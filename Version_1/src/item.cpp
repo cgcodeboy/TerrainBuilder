@@ -25,7 +25,7 @@ ITEM_TYPE Item::getType() const
     return m_type;
 }
 
-void Item::heightDataProcess()
+void Item::processHeightData()
 {
 
 }

@@ -90,7 +90,7 @@ public:
 
     ITEM_TYPE getType() const;
 private:
-    virtual void heightDataProcess();
+    virtual void processHeightData();
     ITEM_TYPE m_type;
 
 signals:

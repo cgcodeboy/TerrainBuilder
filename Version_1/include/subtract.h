@@ -17,6 +17,7 @@ public:
 private:
     SubtractWidget *_subtract;
     int _subtractValue;
+    CImg<unsigned char> m_heightData;
 
     virtual void processHeightData();
 

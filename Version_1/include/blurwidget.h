@@ -15,6 +15,12 @@ public:
     explicit BlurWidget(QWidget *parent = 0);
     ~BlurWidget();
 
+signals:
+    void infoConfirm(int type);
+
+private slots:
+    void on_confirm_BT_clicked();
+
 private:
     Ui::BlurWidget *ui;
 };
